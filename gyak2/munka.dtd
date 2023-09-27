@@ -1,0 +1,8 @@
+<!DOCTYPE mozi [
+    <!ELEMENT mozi (film*)>
+    <!ELEMENT film (rendezo+, szinesz+, ir+)>
+    <!ATTLIST film mufaj (akcio | krimi | drama) #IMPLIED>
+    <!ELEMENT rendezo (#PCDATA)>
+    <!ELEMENT szinesz (#PCDATA)>
+    <!ELEMENT ir (#PCDATA)>
+]>

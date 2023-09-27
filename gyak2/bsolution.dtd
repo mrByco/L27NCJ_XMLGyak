@@ -1,0 +1,14 @@
+<!DOCTYPE mozi [
+    <!ELEMENT mozi (film*)>
+    <!ELEMENT film (rendezo+, szinesz+, ir+)>
+    <!ATTLIST film id CDATA #REQUIRED
+                  mufaj CDATA #REQUIRED>
+    <!ELEMENT rendezo EMPTY>
+    <!ATTLIST rendezo id CDATA #REQUIRED
+                  nev CDATA #REQUIRED>
+    <!ELEMENT szinesz EMPTY>
+    <!ATTLIST szinesz id CDATA #REQUIRED
+                   nev CDATA #REQUIRED>
+    <!ELEMENT iro EMPTY>
+    <!ATTLIST irp id CDATA #REQUIRED>
+]>

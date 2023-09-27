@@ -1,0 +1,10 @@
+<!ELEMENT L27NCJ_orarend (kurzus*)>
+
+<!ELEMENT kurzus (nev, tanar, class*)>
+<!ELEMENT nev (#PCDATA)>
+<!ELEMENT tanar (#PCDATA)>
+<!ELEMENT class (day, start, end, location)>
+<!ELEMENT day (#PCDATA)>
+<!ELEMENT start (#PCDATA)>
+<!ELEMENT end (#PCDATA)>
+<!ELEMENT location (#PCDATA)>

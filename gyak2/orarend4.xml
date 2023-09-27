@@ -1,0 +1,124 @@
+<L27NCJ_orarvege>
+    <kurzus>
+        <nev>Lin. algebra numerikus mó</nev>
+        <tanar>Dr. Karácsony Zsolt</tanar>
+        <ora>
+            <nap>hetfo</nap>
+            <kezdes>8:00</kezdes>
+            <vege>9:00</vege>
+            <hely>X A1 II. em. 218</hely>
+        </ora>
+        <ora>
+            <nap>hetfo</nap>
+            <kezdes>9:00</kezdes>
+            <vege>10:00</vege>
+            <hely>X A1 II. em. 218</hely>
+        </ora>
+        <ora>
+            <nap>hetfo</nap>
+            <kezdes>12:00</kezdes>
+            <vege>13:00</vege>
+            <hely>A1/202 A1 II. em. 202</hely>
+        </ora>
+        <ora>
+            <nap>hetfo</nap>
+            <kezdes>13:00</kezdes>
+            <vege>14:00</vege>
+            <hely>A1/202 A1 II. em. 202</hely>
+        </ora>
+    </kurzus>
+    <kurzus>
+        <nev>Valószínűség-számítás</nev>
+        <tanar>Dr. Fegyverneki Sándor</tanar>
+        <ora>
+            <nap>hetfo</nap>
+            <kezdes>10:00</kezdes>
+            <vege>11:00</vege>
+            <hely>A1/320 A1 III. em. 320</hely>
+        </ora>
+        <ora>
+            <nap>hetfo</nap>
+            <kezdes>11:00</kezdes>
+            <vege>12:00</vege>
+            <hely>A1/320 A1 III. em. 320</hely>
+        </ora>
+        <ora>
+            <nap>Kedd</nap>
+            <kezdes>10:00</kezdes>
+            <vege>11:00</vege>
+            <hely>XV C1 I. em. 101</hely>
+        </ora>
+        <ora>
+            <nap>Kedd</nap>
+            <kezdes>11:00</kezdes>
+            <vege>12:00</vege>
+            <hely>XV C1 I. em. 101</hely>
+        </ora>
+    </kurzus>
+    <kurzus>
+        <nev>Adatbázis rvegeszerek I</nev>
+        <tanar>Dr. Kovács László</tanar>
+        <ora>
+            <nap>Kedd</nap>
+            <kezdes>14:00</kezdes>
+            <vege>15:00</vege>
+            <hely>XXXII A1 magasfsz</hely>
+        </ora>
+    </kurzus>
+    <kurzus>
+        <nev>Speciális szoftverek</nev>
+        <tanar>Dr. Vadon Viktória</tanar>
+        <ora>
+            <nap>Szerda</nap>
+            <kezdes>12:00</kezdes>
+            <vege>13:00</vege>
+            <hely>A1/201 A1 II. em. 201</hely>
+        </ora>
+        <ora>
+            <nap>Szerda</nap>
+            <kezdes>13:00</kezdes>
+            <vege>14:00</vege>
+            <hely>A1/201 A1 II. em. 201</hely>
+        </ora>
+    </kurzus>
+    <kurzus>
+        <nev>Számítógép hálózatok</nev>
+        <tanar>Dr. Kovács Szilveszter</tanar>
+        <ora>
+            <nap>Csütörtök</nap>
+            <kezdes>8:00</kezdes>
+            <vege>9:00</vege>
+            <hely>II A2 mfsz</hely>
+        </ora>
+        <ora>
+            <nap>Csütörtök</nap>
+            <kezdes>9:00</kezdes>
+            <vege>10:00</vege>
+            <hely>II A2 mfsz</hely>
+        </ora>
+        <ora>
+            <nap>Csütörtök</nap>
+            <kezdes>10:00</kezdes>
+            <vege>11:00</vege>
+            <hely>In/202 In II. em. 202</hely>
+        </ora>
+        <ora>
+            <nap>Csütörtök</nap>
+            <kezdes>11:00</kezdes>
+            <vege>12:00</vege>
+            <hely>In/202 In II. em. 202</hely>
+        </ora>
+        <ora>
+            <nap>Csütörtök</nap>
+            <kezdes>12:00</kezdes>
+            <vege>13:00 PM</vege>
+            <hely>III A4 fsz</hely>
+        </ora>
+        <ora>
+            <nap>Csütörtök</nap>
+            <kezdes>13:00</kezdes>
+            <vege>14:00</vege>
+            <hely>III A4 fsz</hely>
+        </ora>
+    </kurzus>
+</L27NCJ_orarvege>

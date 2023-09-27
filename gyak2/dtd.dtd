@@ -1,0 +1,11 @@
+<!DOCTYPE L27NCJ_orarend [
+    <!ELEMENT L27NCJ_orarend (kurzusnev*)>
+    <!ELEMENT kurzusnev (ora+)>
+    <!ELEMENT ora (day, start, end, location)>
+    <!ATTLIST ora id CDATA #IMPLIED>
+    <!ATTLIST ora tipus CDATA #IMPLIED>
+    <!ELEMENT day (#PCDATA)>
+    <!ELEMENT start (#PCDATA)>
+    <!ELEMENT end (#PCDATA)>
+    <!ELEMENT location (#PCDATA)>
+]>
