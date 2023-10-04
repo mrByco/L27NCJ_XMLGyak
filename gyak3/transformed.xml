@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orarend xmlns:xs="http://www.w3.org/2001/XMLSchema" noNameSpaceSchemaLocation="basicxsd.xsd" elementFormDefault="qualified">
+    <ora>
+        <targy>Lin. algebra numerikus mó</targy>
+        <idopont>
+            <nap>hetfo</nap>
+            <tol>8</tol>
+            <ig>9</ig>
+        </idopont>s
+        <helyszin>X A1 II. em. 218</helyszin>
+        <oktato>Dr. Karácsony Zsolt</oktato>
+        <szak></szak>
+    </ora>
+    <ora>
+        <targy>Lin. algebra numerikus mó</targy>
+        <idopont>
+            <nap>hetfo</nap>
+            <tol>9</tol>
+            <ig>10</ig>
+        </idopont>
+        <helyszin>X A1 II. em. 218</helyszin>
+        <oktato>Dr. Karácsony Zsolt</oktato>
+        <szak></szak>
+    </ora>
+    <ora>
+        <targy>Lin. algebra numerikus mó</targy>
+        <idopont>
+            <nap>hetfo</nap>
+            <tol>12</tol>
+            <ig>13</ig>
+        </idopont>
+        <helyszin>A1/202 A1 II. em. 202</helyszin>
+        <oktato>Dr. Karácsony Zsolt</oktato>
+        <szak></szak>
+    </ora>
+    <ora>
+        <targy>Lin. algebra numerikus mó</targy>
+        <idopont>
+            <nap>hetfo</nap>
+            <tol>13</tol>
+            <ig>14</ig>
+        </idopont>
+        <helyszin>A1/202 A1 II. em. 202</helyszin>
+        <oktato>Dr. Karácsony Zsolt</oktato>
+        <szak></szak>
+    </ora>
+    <ora>
+        <targy>Valószínűség-számítás</targy>
+        <idopont>
+            <nap>hetfo</nap>
+            <tol>10</tol>
+            <ig>11</ig>
+        </idopont>
+        <helyszin>A1/320 A1 III. em. 320</helyszin>
+        <oktato>Dr. Fegyverneki Sándor</oktato>
+        <szak></szak>
+    </ora>
+    <ora>
+        <targy>Valószínűség-számítás</targy>
+        <idopont>
+            <nap>hetfo</nap>
+            <tol>11</tol>
+            <ig>12</ig>
+        </idopont>
+        <helyszin>A1/320 A1 III. em. 320</helyszin>
+        <oktato>Dr. Fegyverneki Sándor</oktato>
+        <szak></szak>
+    </ora>
+    <ora>
+        <targy>Valószínűség-számítás</targy>
+        <idopont>
+            <nap>Kedd</nap>
+            <tol>10</tol>
+            <ig>11</ig>
+        </idopont>
+        <helyszin>XV C1 I. em. 101</helyszin>
+        <oktato>Dr. Fegyverneki Sándor</oktato>
+        <szak></szak>
+    </ora>
+    <ora>
+        <targy>Valószínűség-számítás</targy>
+        <idopont>
+            <nap>Kedd</nap>
+            <tol>11</tol>
+            <ig>12</ig>
+        </idopont>
+        <helyszin>XV C1 I. em. 101</helyszin>
+        <oktato>Dr. Fegyverneki Sándor</oktato>
+        <szak></szak>
+    </ora>
+    <ora>
+        <targy>Adatbázis rvegeszerek I</targy>
+        <idopont>
+            <nap>Kedd</nap>
+            <tol>14</tol>
+            <ig>15</ig>
+        </idopont>
+        <helyszin>XXXII A1 magasfsz</helyszin>
+        <oktato>Dr. Kovács László</oktato>
+        <szak></szak>
+    </ora>
+    <ora>
+        <targy>Speciális szoftverek</targy>
+        <idopont>
+            <nap>Szerda</nap>
+            <tol>12</tol>
+            <ig>13</ig>
+        </idopont>
+        <helyszin>A1/201 A1 II. em. 201</helyszin>
+        <oktato>Dr. Vadon Viktória</oktato>
+        <szak></szak>
+    </ora>
+    <ora>
+        <targy>Speciális szoftverek</targy>
+        <idopont>
+            <nap>Szerda</nap>
+            <tol>13</tol>
+            <ig>14</ig>
+        </idopont>
+        <helyszin>A1/201 A1 II. em. 201</helyszin>
+        <oktato>Dr. Vadon Viktória</oktato>
+        <szak></szak>
+    </ora>
+    <ora>
+        <targy>Számítógép hálózatok</targy>
+        <idopont>
+            <nap>Csütörtök</nap>
+            <tol>8</tol>
+            <ig>9</ig>
+        </idopont>
+        <helyszin>II A2 mfsz</helyszin>
+        <oktato>Dr. Kovács Szilveszter</oktato>
+        <szak></szak>
+    </ora>
+    <ora>
+        <targy>Számítógép hálózatok</targy>
+        <idopont>
+            <nap>Csütörtök</nap>
+            <tol>9</tol>
+            <ig>10</ig>
+        </idopont>
+        <helyszin>II A2 mfsz</helyszin>
+        <oktato>Dr. Kovács Szilveszter</oktato>
+        <szak></szak>
+    </ora>
+    <ora>
+        <targy>Számítógép hálózatok</targy>
+        <idopont>
+            <nap>Csütörtök</nap>
+            <tol>10</tol>
+            <ig>11</ig>
+        </idopont>
+        <helyszin>In/202 In II. em. 202</helyszin>
+        <oktato>Dr. Kovács Szilveszter</oktato>
+        <szak></szak>
+    </ora>
+    <ora>
+        <targy>Számítógép hálózatok</targy>
+        <idopont>
+            <nap>Csütörtök</nap>
+            <tol>11</tol>
+            <ig>12</ig>
+        </idopont>
+        <helyszin>In/202 In II. em. 202</helyszin>
+        <oktato>Dr. Kovács Szilveszter</oktato>
+        <szak></szak>
+    </ora>
+    <ora>
+        <targy>Számítógép hálózatok</targy>
+        <idopont>
+            <nap>Csütörtök</nap>
+            <tol>12</tol>
+            <ig>13</ig>
+        </idopont>
+        <helyszin>III A4 fsz</helyszin>
+        <oktato>Dr. Kovács Szilveszter</oktato>
+        <szak></szak>
+    </ora>
+    <ora>
+        <targy>Számítógép hálózatok</targy>
+        <idopont>
+            <nap>Csütörtök</nap>
+            <tol>13</tol>
+            <ig>14</ig>
+        </idopont>
+        <helyszin>III A4 fsz</helyszin>
+        <oktato>Dr. Kovács Szilveszter</oktato>
+        <szak></szak>
+    </ora>
+</orarend>

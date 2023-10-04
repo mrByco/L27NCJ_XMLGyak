@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xsd:element name="orarend">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ora" type="oraTipus" minOccurs="0" maxOccurs="unbounded" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="oraTipus">
+        <xsd:sequence>
+            <xsd:element name="targy" type="xsd:string"/>
+            <xsd:element name="idopont" type="idopontTipus"/>
+            <xsd:element name="helyszin" type="xsd:string"/>
+            <xsd:element name="oktato" type="xsd:string"/>
+            <xsd:element name="szak" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:int" use="required"/>
+        <xsd:attribute name="tipus" type="oraTipusTipus" default="eloadas"></xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:simpleType name="oraTipusTipus">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="eloadas"/>
+            <xsd:enumeration value="gyakorlat"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="idopontTipus">
+        <xsd:sequence>
+            <xsd:element name="nap" type="napTipus"></xsd:element>
+            <xsd:element name="tol" type="idopontOraTipus"></xsd:element>
+            <xsd:element name="ig" type="idopontOraTipus"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="napTipus">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="hetfo"/>
+            <xsd:enumeration value="kedd"/>
+            <xsd:enumeration value="szerda"/>
+            <xsd:enumeration value="csutortok"/>
+            <xsd:enumeration value="pentek"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="idopontOraTipus">
+        <xsd:restriction base="xsd:positiveInteger">
+            <xsd:minInclusive value="8"/>
+            <xsd:maxInclusive value="20"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>
