@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xsd:element name="konyvek" minOccurs="0" maxOccurs="unbounded">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="cim" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                <xsd:element name="szerzo" type="xsd:string"/>
+                <xsd:element name="szereplo" minOccurs="0" maxOccurs="20">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="nev" type="xsd:string" />
+                            <xsd:element name="baratja" type="xsd:string" minOccurs="0" maxOccurs="5"/>
+                            <xsd:element name="szuletett" type="xsd:string"/>
+                            <xsd:element name="jellemzes" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
