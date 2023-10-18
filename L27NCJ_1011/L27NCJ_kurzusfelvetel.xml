@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<targyfelvetel xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!-- use regex later in later in xsd when (date?!) -->
+
+    <hallgato>
+        <hnev>
+        </hnev>
+        <szulnev>
+        </szulnev>
+        <szak evf="2001">
+        </szak>
+    </hallgato>
+
+    <kurzus>
+        <kurzusnev></kurzusnev>
+        <kredit></kredit>
+        <hely></hely>
+        <idopont></idopont>
+        <oktato></oktato>
+        <oraado></oraado>
+    </kurzus>
+
+</targyfelvetel>

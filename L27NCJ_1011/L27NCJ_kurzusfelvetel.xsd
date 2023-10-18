@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xsd:element name="hallgato" type="hallgatoTipus" />
+    <xsd:element name="kurzus" type="kurzusokTipus" minOccurs="0" maxOccurs="unbounded" />
+
+    <xsd:element name="hnev" type="xsd:string"/>
+    <xsd:element name="szulnev" type="xsd:string"/>
+    <xsd:element name="szak" type="xsd:string">
+        <xsd:attribute name="evj" type="xsd:int" use="required"/>
+    </xsd:element>
+    <xsd:element name="hnev" type="hallgatoTipus" />
+    <xsd:element name="szulnev" type="kurzusokTipus" minOccurs="0" maxOccurs="unbounded" />
+    <xsd:element name="szak" type="xsd:string"/>
+
+    <xsd:element name="targyfelvetel">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="hallgato" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element name="kurzus" type="kurzusokTipus" minOccurs="0" maxOccurs="unbounded" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:complexType name="hallgatoTipus">
+        <xsd:sequence>
+            <xsd:element ref="hnev"/>
+            <xsd:element ref="szulnev"/>
+            <xsd:element ref="szak"/>
+        </xsd:sequence>
+        <xsd:attribute name="tipus" type="oraTipusTipus" default="eloadas"></xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:complexType name="kurzusTypus">
+        <xsd:sequence>
+            <xsd:element ref="hnev"/>
+            <xsd:element ref="szulnev"/>
+            <xsd:element ref="szak"/>
+        </xsd:sequence>
+        <xsd:attribute name="tipus" type="oraTipusTipus" default="eloadas"></xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>
