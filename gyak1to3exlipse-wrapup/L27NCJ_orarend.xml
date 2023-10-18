@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<orarend xmlns:xs="http://www.w3.org/2001/XMLSchema" noNameSpaceSchemaLocation="basicxsd.xsd" elementFormDefault="qualified">
+<orarend xmlns:xs="http://www.w3.org/2001/XMLSchema" k="basicxsd.xsd" elementFormDefault="qualified">
     <ora>
         <targy>Lin. algebra numerikus mó</targy>
         <idopont>

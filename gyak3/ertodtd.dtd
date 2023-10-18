@@ -1,12 +1,14 @@
-<!ELEMENT er (A*, B*)>
+<!ELEMENT er (A*, B*, c)>
+<!ELEMENT c (aId, bId, v)>
+
 <!ELEMENT A (a, b*, c?)>
-<!ELEMENT b (x, y)>
-<!ELEMENT c (e, d)>
+<!ELEMENT b (x?, y?)>
+<!ELEMENT c (e?, d?)>
 
 <!ELEMENT B (a, b, C*)>
-<!ELEMENT b (x, y)>
+<!ELEMENT b (x?, y?)>
 
-<!ELEMENT
+<!ELEMENT C (a, b)>
 
 
 <!ELEMENT ora (targy, idopont, helyszin, oktato, szak)>

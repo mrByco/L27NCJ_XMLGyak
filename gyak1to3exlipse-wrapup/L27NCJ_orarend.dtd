@@ -8,6 +8,8 @@
 <!ELEMENT nap (#PCDATA)>
 <!ELEMENT tol (#PCDATA)>
 <!ELEMENT ig (#PCDATA)>
+<!ATTLIST ig
+	>
 <!ELEMENT helyszin (#PCDATA)>
 <!ELEMENT oktato (#PCDATA)>
 <!ELEMENT szak (#PCDATA)>
