@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xsd:element name="szemelyNev" type="xsd:string"></xsd:element>
+
+    <xsd:element name="fesztival">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="resztvevo" type="resztvevoTipus" minOccurs="0" maxOccurs="unbounded" >
+                </xsd:element>
+
+                <xsd:element name="fellepo" type="fellepoTipus" minOccurs="1" maxOccurs="unbounded" />
+                <xsd:element name="tulaj" type="tulajTipus" minOccurs="1" maxOccurs="1" />
+            </xsd:sequence>
+
+            
+            <xsd:attribute name="feszId"></xsd:attribute>
+            <xsd:attribute name="nev">
+
+            </xsd:attribute>
+            <!-- helyszin, ev-->
+            <xsd:attribute name="helyszin">
+
+            </xsd:attribute>
+            <!-- TODO RESTRICTION -->
+            <xsd:attribute name="ev">
+
+            </xsd:attribute>
+        </xsd:complexType>
+
+
+
+        <xsd:key name="resztvevoId">
+            <xsd:selector xpath="./resztvevo"/>
+            <xsd:field xpath="@resztvevoId"/>
+        </xsd:key>
+        <xsd:key name="fesztivalId" >
+            <xsd:selector xpath="./fesztival"></xsd:selector>
+            <xsd:field xpath="@feszId"/>
+        </xsd:key>
+        <xsd:key name="tulajId">
+            <xsd:selector xpath="./tulaj"></xsd:selector>
+            <xsd:field xpath="@id"></xsd:field>
+        </xsd:key>
+
+
+    </xsd:element>
+
+
+    <xsd:complexType name="resztvevoTipus">
+        <xsd:sequence>
+            <xsd:element ref="szemelyNev"/>
+            <xsd:element name="diakigazolvany" type="xsd:string"/>
+            <xsd:element name="lakcim">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="telepules"/>
+                        <xsd:element name="utca"/>
+                        <xsd:element name="hazszam"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="resztvevoId" type="xsd:string"></xsd:attribute>
+    </xsd:complexType>
+
+
+    <xsd:complexType name="fesztivalFellepes">
+        <xsd:sequence>
+            <xsd:element name="fellepoId" type="xsd:int"></xsd:element>
+            <xsd:element name="fesztivalId" type="xsd:int"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+    <xsd:complexType name="fellepoTipus">
+        <xsd:sequence>
+            <xsd:element ref="szemelyNev">
+            </xsd:element>
+            <xsd:element name="orszag" type="xsd:string"></xsd:element>
+            <xsd:element name="dij" type="xsd:int"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+    <xsd:complexType name="tulajTipus">
+        <xsd:sequence>
+            <xsd:element ref="szemelyNev"></xsd:element>
+            <xsd:element name="adoszam" type="xsd:string"></xsd:element>
+            <xsd:element name="alapitas" type="xsd:int"></xsd:element>
+            <xsd:element name="bevetel" type="xsd:int"></xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:string"></xsd:attribute>
+    </xsd:complexType>
+
+
+    <xsd:complexType name="kozvelemeny">
+        <xsd:sequence>
+            <xsd:element name="kerdezo"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="nyelvtudas">
+        <xsd:sequence>
+            <xsd:element name="nyelv" type="xsd:string"></xsd:element>
+            <xsd:element name="szint" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="bar">
+        <xsd:sequence>
+            <xsd:element name="nev" type="xsd:string"></xsd:element>
+            <xsd:element name="ital" type="xsd:string" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+            <xsd:element name="ceg" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="almalmazott">
+        <xsd:sequence>
+            <xsd:element ref="szemelyNev"></xsd:element>
+            <xsd:element name="muszak" type="xsd:string">
+                <!-- TODO create regex for muszak need to text: ^\d{2}:\d{2}-\d{2}:\d{2}$ -->
+            </xsd:element>
+            <xsd:element name="fizetes">
+
+            </xsd:element>
+
+        </xsd:sequence>
+    </xsd:complexType>
+	
+	
+	
+	<!-- HELP FROM PREVIOUS LESSON -->
+
+
+    <xsd:complexType name="oraTipus">
+        <xsd:sequence>
+            <xsd:element name="targy" type="xsd:string"/>
+            <xsd:element name="idopont" type="idopontTipus"/>
+            <xsd:element name="helyszin" type="xsd:string"/>
+            <xsd:element name="oktato" type="xsd:string"/>
+            <xsd:element name="szak" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:int" use="required"/>
+        <xsd:attribute name="tipus" type="oraTipusTipus" default="eloadas"></xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:simpleType name="oraTipusTipus">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="eloadas"/>
+            <xsd:enumeration value="gyakorlat"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="idopontTipus">
+        <xsd:sequence>
+            <xsd:element name="nap" type="napTipus"></xsd:element>
+            <xsd:element name="tol" type="idopontOraTipus"></xsd:element>
+            <xsd:element name="ig" type="idopontOraTipus"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="napTipus">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="hetfo"/>
+            <xsd:enumeration value="kedd"/>
+            <xsd:enumeration value="szerda"/>
+            <xsd:enumeration value="csutortok"/>
+            <xsd:enumeration value="pentek"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="idopontOraTipus">
+        <xsd:restriction base="xsd:positiveInteger">
+            <xsd:minInclusive value="8"/>
+            <xsd:maxInclusive value="20"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+
+</xsd:schema>

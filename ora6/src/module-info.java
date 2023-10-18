@@ -1,0 +1,2 @@
+module ora6 {
+}
