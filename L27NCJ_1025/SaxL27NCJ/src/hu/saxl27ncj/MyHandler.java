@@ -43,7 +43,13 @@ public class MyHandler extends DefaultHandler {
 
 	@Override
 	public void characters(char ch[], int start, int length) throws SAXException {
-		
+		String chars = new String(ch, start, length).trim();
+		if (!chars.isEmpty()) {
+			indenting++;
+			printIndent();
+			System.out.println(chars);
+			indenting--;
+		}
 	}
 	
 	private void printLine(String element, String suffix, String attributes) {
