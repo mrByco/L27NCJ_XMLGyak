@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<targyfelvetel xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <hallgato>
+        <hnev>John Doe</hnev>
+        <szulnev>Doe</szulnev>
+        <szak evf="2001">Computer Science</szak>
+    </hallgato>
+
+    <kurzus>
+        <kurzusnev>Introduction to Programming</kurzusnev>
+        <kredit>3</kredit>
+        <hely>Room 101</hely>
+        <idopont>Monday, 9:00 AM</idopont>
+        <oktato>Professor Smith</oktato>
+        <oraado>2</oraado>
+    </kurzus>
+
+    <hallgato>
+        <hnev>Jane Smith</hnev>
+        <szulnev>Smith</szulnev>
+        <szak evf="2001">Mathematics</szak>
+    </hallgato>
+
+    <kurzus>
+        <kurzusnev>Linear Algebra</kurzusnev>
+        <kredit>4</kredit>
+        <hely>Room 202</hely>
+        <idopont>Tuesday, 10:30 AM</idopont>
+        <oktato>Professor Johnson</oktato>
+        <oraado>3</oraado>
+    </kurzus>
+
+</targyfelvetel>
