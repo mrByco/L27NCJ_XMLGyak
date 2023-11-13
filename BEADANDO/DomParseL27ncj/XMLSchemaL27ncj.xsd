@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <!-- Simple Types -->
+	 <!-- Simple Types -->
     <xs:simpleType name="nonNegativeInteger">
         <xs:restriction base="xs:integer">
             <xs:minInclusive value="0"/>
@@ -26,90 +26,110 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="phoneNumberType">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="\d{3}-\d{3}-\d{4}"/>
-        </xs:restriction>
-    </xs:simpleType>
+	    <!-- Primitive Types -->
+    <xs:element name="OrderItemID" type="xs:positiveInteger"/>
+    <xs:element name="Quantity" type="xs:positiveInteger"/>
+    <xs:element name="State" type="xs:string"/>
+    <xs:element name="OrderID" type="xs:positiveInteger"/>
+    <xs:element name="FoodID" type="xs:positiveInteger"/>
+    <xs:element name="TotalPrice" type="currencyFormat"/>
+    <xs:element name="TasteRating" type="ratingType"/>
+    <xs:element name="ServiceRating" type="ratingType"/>
+    <xs:element name="PaymentDate" type="dateTimeFormat"/>
+    <xs:element name="CompletionTime" type="dateTimeFormat"/>
+    <xs:element name="StartTime" type="dateTimeFormat"/>
+    <xs:element name="PaymentMethod" type="xs:string"/>
+    <xs:element name="RestaurantID" type="xs:positiveInteger"/>
+    <xs:element name="Name" type="xs:string"/>
+    <xs:element name="Street" type="xs:string"/>
+    <xs:element name="City" type="xs:string"/>
+    <xs:element name="Country" type="xs:string"/>
+    <xs:element name="Price" type="currencyFormat"/>
+    <xs:element name="ImageID" type="xs:positiveInteger"/>
+    <xs:element name="Description" type="xs:string"/>
+    <xs:element name="IngredientID" type="xs:positiveInteger"/>
+    <xs:element name="UnitPrice" type="currencyFormat"/>
+    <xs:element name="MeasurementUnit" type="xs:string"/>
+    <xs:element name="CapabilityName" type="xs:string"/>
+    <xs:element name="EmployeeID" type="xs:positiveInteger"/>
+    <xs:element name="StockItemID" type="xs:positiveInteger"/>
+    <xs:element name="LastChecked" type="dateTimeFormat"/>
+    <xs:element name="IdCardNumber" type="xs:string"/>
 
-    <!-- Complex Types -->
+     <!-- Complex Types with References -->
     <xs:complexType name="OrderItemType">
         <xs:sequence>
-            <xs:element name="OrderItemID" type="nonNegativeInteger"/>
-            <xs:element name="Quantity" type="nonNegativeInteger"/>
-            <xs:element name="State" type="xs:string"/>
-            <xs:element name="OrderID" type="nonNegativeInteger"/>
-            <xs:element name="FoodID" type="nonNegativeInteger"/>
+            <xs:element ref="OrderItemID"/>
+            <xs:element ref="Quantity"/>
+            <xs:element ref="State"/>
+            <xs:element ref="OrderID"/>
+            <xs:element ref="FoodID"/>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="OrderType">
         <xs:sequence>
-            <xs:element name="OrderID" type="nonNegativeInteger"/>
-            <xs:element name="TotalPrice" type="currencyFormat"/>
-            <xs:element name="TasteRating" type="ratingType" minOccurs="0"/>
-            <xs:element name="ServiceRating" type="ratingType" minOccurs="0"/>
-            <xs:element name="PaymentDate" type="dateTimeFormat" minOccurs="0"/>
-            <xs:element name="CompletionTime" type="dateTimeFormat" minOccurs="0"/>
-            <xs:element name="StartTime" type="dateTimeFormat"/>
-            <xs:element name="PaymentMethod" type="xs:string"/>
-            <xs:element name="RestaurantID" type="nonNegativeInteger" minOccurs="0"/>
+            <xs:element ref="OrderID"/>
+            <xs:element ref="TotalPrice"/>
+            <xs:element ref="TasteRating" minOccurs="0"/>
+            <xs:element ref="ServiceRating" minOccurs="0"/>
+            <xs:element ref="PaymentDate" minOccurs="0"/>
+            <xs:element ref="CompletionTime" minOccurs="0"/>
+            <xs:element ref="StartTime"/>
+            <xs:element ref="PaymentMethod"/>
+            <xs:element ref="RestaurantID" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="RestaurantType">
         <xs:sequence>
-            <xs:element name="RestaurantID" type="nonNegativeInteger"/>
-            <xs:element name="Name" type="xs:string"/>
-            <xs:element name="Street" type="xs:string"/>
-            <xs:element name="City" type="xs:string"/>
-            <xs:element name="PhoneNumber" type="phoneNumberType"/>
-            <xs:element name="CuisineType" type="xs:string"/>
-            <xs:element name="Country" type="xs:string"/>
+            <xs:element ref="RestaurantID"/>
+            <xs:element name="Address">
+	            <xs:complexType>
+					<xs:sequence>
+			            <xs:element ref="Street"/>
+			            <xs:element ref="City"/>
+            			<xs:element ref="Street"/>
+					</xs:sequence>
+	            </xs:complexType>
+            </xs:element>
+            <xs:element ref="Name"/>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="FoodType">
         <xs:sequence>
-            <xs:element name="FoodID" type="nonNegativeInteger"/>
-            <xs:element name="Name" type="xs:string"/>
-            <xs:element name="Price" type="currencyFormat"/>
-            <xs:element name="ImageID" type="nonNegativeInteger" minOccurs="0"/>
-            <xs:element name="Description" type="xs:string"/>
+            <xs:element ref="FoodID"/>
+            <xs:element ref="Name"/>
+            <xs:element ref="Price"/>
+            <xs:element ref="ImageID" minOccurs="0"/>
+            <xs:element ref="Description"/>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="IngredientType">
         <xs:sequence>
-            <xs:element name="IngredientID" type="nonNegativeInteger"/>
-            <xs:element name="Name" type="xs:string"/>
-            <xs:element name="UnitPrice" type="currencyFormat"/>
-            <xs:element name="MeasurementUnit" type="xs:string"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="EmployeeCapabilityType">
-        <xs:sequence>
-            <xs:element name="CapabilityID" type="nonNegativeInteger"/>
-            <xs:element name="CapabilityName" type="xs:string"/>
-            <xs:element name="EmployeeID" type="nonNegativeInteger"/>
+            <xs:element ref="IngredientID"/>
+            <xs:element ref="Name"/>
+            <xs:element ref="UnitPrice"/>
+            <xs:element ref="MeasurementUnit"/>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="StockItemType">
         <xs:sequence>
-            <xs:element name="StockItemID" type="nonNegativeInteger"/>
-            <xs:element name="LastChecked" type="dateTimeFormat"/>
-            <xs:element name="EmployeeID" type="nonNegativeInteger"/>
-            <xs:element name="Quantity" type="nonNegativeInteger"/>
+            <xs:element ref="StockItemID"/>
+            <xs:element ref="LastChecked"/>
+            <xs:element ref="EmployeeID"/>
+            <xs:element ref="Quantity"/>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="EmployeeType">
         <xs:sequence>
-            <xs:element name="EmployeeID" type="nonNegativeInteger"/>
-            <xs:element name="Name" type="xs:string"/>
-            <xs:element name="IdCardNumber" type="xs:string"/>
+            <xs:element ref="EmployeeID"/>
+            <xs:element ref="Name"/>
+            <xs:element ref="IdCardNumber"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -122,7 +142,7 @@
                 <xs:element name="Restaurant" type="RestaurantType" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element name="Food" type="FoodType" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element name="Ingredient" type="IngredientType" minOccurs="0" maxOccurs="unbounded"/>
-                <xs:element name="EmployeeCapability" type="EmployeeCapabilityType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="CapabilityName" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element name="StockItem" type="StockItemType" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element name="Employee" type="EmployeeType" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
@@ -131,43 +151,38 @@
 
 	    <!-- Primary Keys -->
 	    <xs:key name="OrderItemKey">
-	        <xs:selector xpath=".//OrderItem"/>
-	        <xs:field xpath="OrderItemID"/>
+	        <xs:selector xpath="OrderItem"/>
+	        <xs:field xpath="@OrderItemID"/>
 	    </xs:key>
 	
 	    <xs:key name="OrderKey">
-	        <xs:selector xpath=".//Order"/>
-	        <xs:field xpath="OrderID"/>
+	        <xs:selector xpath="Order"/>
+	        <xs:field xpath="@OrderID"/>
 	    </xs:key>
 	
 	    <xs:key name="RestaurantKey">
-	        <xs:selector xpath=".//Restaurant"/>
-	        <xs:field xpath="RestaurantID"/>
+	        <xs:selector xpath="Restaurant"/>
+	        <xs:field xpath="@RestaurantID"/>
 	    </xs:key>
 	
 	    <xs:key name="FoodKey">
-	        <xs:selector xpath=".//Food"/>
-	        <xs:field xpath="FoodID"/>
+	        <xs:selector xpath="Food"/>
+	        <xs:field xpath="@FoodID"/>
 	    </xs:key>
 	
 	    <xs:key name="IngredientKey">
-	        <xs:selector xpath=".//Ingredient"/>
-	        <xs:field xpath="IngredientID"/>
-	    </xs:key>
-	
-	    <xs:key name="EmployeeCapabilityKey">
-	        <xs:selector xpath=".//EmployeeCapability"/>
-	        <xs:field xpath="CapabilityID"/>
+	        <xs:selector xpath="Ingredient"/>
+	        <xs:field xpath="@IngredientID"/>
 	    </xs:key>
 	
 	    <xs:key name="StockItemKey">
-	        <xs:selector xpath=".//StockItem"/>
-	        <xs:field xpath="StockItemID"/>
+	        <xs:selector xpath="StockItem"/>
+	        <xs:field xpath="@StockItemID"/>
 	    </xs:key>
 	
 	    <xs:key name="EmployeeKey">
-	        <xs:selector xpath=".//Employee"/>
-	        <xs:field xpath="EmployeeID"/>
+	        <xs:selector xpath="Employee"/>
+	        <xs:field xpath="@EmployeeID"/>
 	    </xs:key>
         
     </xs:element>

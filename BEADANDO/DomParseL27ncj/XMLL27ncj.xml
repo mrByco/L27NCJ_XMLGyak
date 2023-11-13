@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RestaurantOrderSystem xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaL27ncj.xsd">
+    <OrderItem OrderItemID="2">
+        <OrderItemID>1</OrderItemID>
+        <Quantity>2</Quantity>
+        <State>InProgress</State>
+        <OrderID>101</OrderID>
+        <FoodID>201</FoodID>
+    </OrderItem>
+    <OrderItem>
+        <OrderItemID>2</OrderItemID>
+        <Quantity>1</Quantity>
+        <State>Delivered</State>
+        <OrderID>102</OrderID>
+        <FoodID>202</FoodID>
+    </OrderItem>
+    <OrderItem>
+        <OrderItemID>3</OrderItemID>
+        <Quantity>3</Quantity>
+        <State>Ready</State>
+        <OrderID>103</OrderID>
+        <FoodID>203</FoodID>
+    </OrderItem>
+    
+    <Order>
+        <OrderID>101</OrderID>
+        <TotalPrice>50.00</TotalPrice>
+        <TasteRating>4.5</TasteRating>
+        <ServiceRating>4.0</ServiceRating>
+        <PaymentDate>2023-04-05T10:00:00</PaymentDate>
+        <CompletionTime>2023-04-05T11:30:00</CompletionTime>
+        <StartTime>2023-04-05T09:45:00</StartTime>
+        <PaymentMethod>CreditCard</PaymentMethod>
+        <RestaurantID>301</RestaurantID>
+    </Order>
+    <Order>
+        <OrderID>102</OrderID>
+        <TotalPrice>30.00</TotalPrice>
+        <TasteRating>4.0</TasteRating>
+        <ServiceRating>3.5</ServiceRating>
+        <PaymentDate>2023-04-06T15:00:00</PaymentDate>
+        <CompletionTime>2023-04-06T16:15:00</CompletionTime>
+        <StartTime>2023-04-06T14:30:00</StartTime>
+        <PaymentMethod>PayPal</PaymentMethod>
+        <RestaurantID>302</RestaurantID>
+    </Order>
+    <Order>
+        <OrderID>103</OrderID>
+        <TotalPrice>20.00</TotalPrice>
+        <TasteRating>5.0</TasteRating>
+        <ServiceRating>5.0</ServiceRating>
+        <PaymentDate>2023-04-07T18:20:00</PaymentDate>
+        <CompletionTime>2023-04-07T19:00:00</CompletionTime>
+        <StartTime>2023-04-07T17:50:00</StartTime>
+        <PaymentMethod>Cash</PaymentMethod>
+        <RestaurantID>303</RestaurantID>
+    </Order>
+    
+    <Restaurant>
+        <RestaurantID>301</RestaurantID>
+        <Address>
+            <Street>Main St</Street>
+            <City>Springfield</City>
+            <Country>USA</Country>
+        </Address>
+        <Name>Good Eats</Name>
+    </Restaurant>
+    <Restaurant>
+        <RestaurantID>302</RestaurantID>
+        <Address>
+            <Street>Second St</Street>
+            <City>Shelbyville</City>
+            <Country>USA</Country>
+        </Address>
+        <Name>Happy Meals</Name>
+    </Restaurant>
+    <Restaurant>
+        <RestaurantID>303</RestaurantID>
+        <Address>
+            <Street>Third St</Street>
+            <City>Ogdenville</City>
+            <Country>USA</Country>
+        </Address>
+        <Name>Tasty Treats</Name>
+    </Restaurant>
+    
+    <Food>
+        <FoodID>201</FoodID>
+        <Name>Pizza Margherita</Name>
+        <Price>15.00</Price>
+        <ImageID>1001</ImageID>
+        <Description>Classic pizza with tomato sauce, mozzarella, and basil.</Description>
+    </Food>
+    <Food>
+        <FoodID>202</FoodID>
+        <Name>Spaghetti Carbonara</Name>
+        <Price>12.00</Price>
+        <ImageID>1002</ImageID>
+        <Description>Traditional Italian pasta with eggs, cheese, pancetta, and pepper.</Description>
+    </Food>
+    <Food>
+        <FoodID>203</FoodID>
+        <Name>Lasagna Bolognese</Name>
+        <Price>14.00</Price>
+        <ImageID>1003</ImageID>
+        <Description>Layers of lasagna noodles, meat sauce, bechamel, and cheese.</Description>
+    </Food>
+    
+    <Ingredient>
+        <IngredientID>401</IngredientID>
+        <Name>Tomato Sauce</Name>
+        <UnitPrice>5.00</UnitPrice>
+        <MeasurementUnit>Liters</MeasurementUnit>
+    </Ingredient>
+    <Ingredient>
+        <IngredientID>402</IngredientID>
+        <Name>Mozzarella Cheese</Name>
+        <UnitPrice>10.00</UnitPrice>
+        <MeasurementUnit>Kilograms</MeasurementUnit>
+    </Ingredient>
+    <Ingredient>
+        <IngredientID>403</IngredientID>
+        <Name>Fresh Basil</Name>
+        <UnitPrice>2.00</UnitPrice>
+        <MeasurementUnit>Bunches</MeasurementUnit>
+    </Ingredient>
+    
+    <CapabilityName>Cooking</CapabilityName>
+    <CapabilityName>Delivery</CapabilityName>
+    <CapabilityName>Management</CapabilityName>
+    
+    <StockItem>
+        <StockItemID>501</StockItemID>
+        <LastChecked>2023-04-05T08:00:00</LastChecked>
+        <EmployeeID>601</EmployeeID>
+        <Quantity>100</Quantity>
+    </StockItem>
+    <StockItem>
+        <StockItemID>502</StockItemID>
+        <LastChecked>2023-04-06T08:00:00</LastChecked>
+        <EmployeeID>602</EmployeeID>
+        <Quantity>80</Quantity>
+    </StockItem>
+    <StockItem>
+        <StockItemID>503</StockItemID>
+        <LastChecked>2023-04-07T08:00:00</LastChecked>
+        <EmployeeID>603</EmployeeID>
+        <Quantity>120</Quantity>
+    </StockItem>
+    
+    <Employee>
+        <EmployeeID>601</EmployeeID>
+        <Name>John Doe</Name>
+        <IdCardNumber>123456789</IdCardNumber>
+    </Employee>
+    <Employee>
+        <EmployeeID>602</EmployeeID>
+        <Name>Jane Smith</Name>
+        <IdCardNumber>987654321</IdCardNumber>
+    </Employee>
+    <Employee>
+        <EmployeeID>603</EmployeeID>
+        <Name>Jim Brown</Name>
+        <IdCardNumber>555555555</IdCardNumber>
+    </Employee>
+</RestaurantOrderSystem>
