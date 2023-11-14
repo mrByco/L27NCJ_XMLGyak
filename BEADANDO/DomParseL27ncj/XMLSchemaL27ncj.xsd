@@ -59,17 +59,16 @@
      <!-- Complex Types with References -->
     <xs:complexType name="OrderItemType">
         <xs:sequence>
-            <xs:element ref="OrderItemID"/>
             <xs:element ref="Quantity"/>
             <xs:element ref="State"/>
-            <xs:element ref="OrderID"/>
-            <xs:element ref="FoodID"/>
         </xs:sequence>
+        <xs:attribute name="OrderItemID" type="xs:positiveInteger"></xs:attribute>
+        <xs:attribute name="OrderID" type="xs:positiveInteger"></xs:attribute>
+        <xs:attribute name="FoodID" type="xs:positiveInteger"></xs:attribute>
     </xs:complexType>
 
     <xs:complexType name="OrderType">
         <xs:sequence>
-            <xs:element ref="OrderID"/>
             <xs:element ref="TotalPrice"/>
             <xs:element ref="TasteRating" minOccurs="0"/>
             <xs:element ref="ServiceRating" minOccurs="0"/>
@@ -77,13 +76,13 @@
             <xs:element ref="CompletionTime" minOccurs="0"/>
             <xs:element ref="StartTime"/>
             <xs:element ref="PaymentMethod"/>
-            <xs:element ref="RestaurantID" minOccurs="0"/>
         </xs:sequence>
+        <xs:attribute name="OrderItemID" type="xs:positiveInteger"></xs:attribute>
+        <xs:attribute name="RestaurantID" type="xs:positiveInteger"></xs:attribute>
     </xs:complexType>
 
     <xs:complexType name="RestaurantType">
         <xs:sequence>
-            <xs:element ref="RestaurantID"/>
             <xs:element name="Address">
 	            <xs:complexType>
 					<xs:sequence>
@@ -95,6 +94,8 @@
             </xs:element>
             <xs:element ref="Name"/>
         </xs:sequence>
+        <xs:attribute name="OrderItemID" type="xs:positiveInteger"></xs:attribute>
+        <xs:attribute name="RestaurantID" type="xs:positiveInteger"></xs:attribute>
     </xs:complexType>
 
     <xs:complexType name="FoodType">
@@ -105,32 +106,33 @@
             <xs:element ref="ImageID" minOccurs="0"/>
             <xs:element ref="Description"/>
         </xs:sequence>
+        <xs:attribute name="FoodID" type="xs:positiveInteger"></xs:attribute>
     </xs:complexType>
 
     <xs:complexType name="IngredientType">
         <xs:sequence>
-            <xs:element ref="IngredientID"/>
             <xs:element ref="Name"/>
             <xs:element ref="UnitPrice"/>
             <xs:element ref="MeasurementUnit"/>
         </xs:sequence>
+        <xs:attribute name="IngredientID" type="xs:positiveInteger"></xs:attribute>
     </xs:complexType>
 
     <xs:complexType name="StockItemType">
         <xs:sequence>
-            <xs:element ref="StockItemID"/>
             <xs:element ref="LastChecked"/>
-            <xs:element ref="EmployeeID"/>
             <xs:element ref="Quantity"/>
         </xs:sequence>
+        <xs:attribute name="StockItemID" type="xs:positiveInteger"></xs:attribute>
+        <xs:attribute name="EmployeeID" type="xs:positiveInteger"></xs:attribute>
     </xs:complexType>
 
     <xs:complexType name="EmployeeType">
         <xs:sequence>
-            <xs:element ref="EmployeeID"/>
             <xs:element ref="Name"/>
             <xs:element ref="IdCardNumber"/>
         </xs:sequence>
+        <xs:attribute name="EmployeeID" type="xs:positiveInteger"></xs:attribute>
     </xs:complexType>
 
     <!-- Root Element -->
