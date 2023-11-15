@@ -4,7 +4,9 @@
     <!-- OrderItem Instances -->
     <OrderItem OrderItemID="1001" OrderID="5001" FoodID="2001">
         <Quantity>2</Quantity>
-        <State>Elkészült</State>
+        <State>
+        	Elkészült
+        </State>
     </OrderItem>
     <OrderItem OrderItemID="1002" OrderID="5002" FoodID="2002">
         <Quantity>1</Quantity>
@@ -16,7 +18,8 @@
     </OrderItem>
     <OrderItem OrderItemID="1004" OrderID="5004" FoodID="2004">
         <Quantity>4</Quantity>
-        <State>Megrendelve</State>
+        <State>
+        	Megrendelve</State>
     </OrderItem>
 
     <!-- Order Instances -->

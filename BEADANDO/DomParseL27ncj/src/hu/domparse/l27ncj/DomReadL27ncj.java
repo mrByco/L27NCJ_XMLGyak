@@ -71,21 +71,29 @@ public class DomReadL27ncj {
     	
         int length = children.getLength();
         
-    	if (length > 1) {
+        if (length > 1) {
             for (int i = 0; i < length; i++) {
          
             	Node child = children.item(i);
+            	var subChildren = child.getChildNodes();
             	if (child.getNodeName() == "#text") {
+            		stream.print(child.getTextContent());
             		continue;
             	}
             	if (child.getNodeName() == "#comment") {
             		printComment(child.getTextContent(), stream);
             		continue;
             	}
-            	PrintNode(child, indenting + 1, stream);
+
+            	if (subChildren.getLength() > 1) {
+                	PrintNode(child, indenting + 1, stream);
+            	}else {
+
+            		stream.print(child.getTextContent());
+            	}
             }
     	}else {
-    		printLine(node.getTextContent(), "", "", indenting + 2, stream);
+    		//printLine(node.getTextContent(), "", "", indenting + 2, stream);
     	}
     	printEndTag(node.getNodeName(), indenting, System.out);
     }
@@ -111,17 +119,22 @@ public class DomReadL27ncj {
             for (int i = 0; i < length; i++) {
          
             	Node child = children.item(i);
+            	var subChildren = child.getChildNodes();
             	if (child.getNodeName() == "#text") {
+            		stream.print(child.getFirstChild().getTextContent());
             		continue;
             	}
             	if (child.getNodeName() == "#comment") {
             		printComment(child.getTextContent(), stream);
             		continue;
             	}
-            	PrintNode(child, indenting + 1, stream);
+
+            	if (subChildren.getLength() > 1) {
+                	PrintNode(child, indenting + 1, stream);
+            	}
             }
     	}else {
-    		printLine(node.getTextContent(), "", "", indenting + 2, stream);
+    		//printLine(node.getTextContent(), "", "", indenting + 2, stream);
     	}
     	printEndTag(node.getNodeName(), indenting, stream);
     	
@@ -135,7 +148,7 @@ public class DomReadL27ncj {
     	if (namedNodeMap != null) {
     		for (int i = 0; i < namedNodeMap.getLength(); i++) {
     			if (i > 0) {
-    				attrContentStr += ",";
+    				attrContentStr += " ";
     			}
     			String name = namedNodeMap.item(i).getNodeName();
     			String value = namedNodeMap.item(i).getNodeValue();
