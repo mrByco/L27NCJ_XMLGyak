@@ -85,7 +85,7 @@ public class DomReadL27ncj {
             	PrintNode(child, indenting + 1, stream);
             }
     	}else {
-    		printLine(node.getTextContent(), "", "", indenting + 2, System.out);
+    		printLine(node.getTextContent(), "", "", indenting + 2, stream);
     	}
     	printEndTag(node.getNodeName(), indenting, System.out);
     }

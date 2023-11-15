@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<L27NCJRestaurants xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance",xsi:noNamespaceSchemaLocation="XMLSchemaL27ncj.xsd">
+  <OrderItem FoodID="2005",OrderID="5005",OrderItemID="1005">
+      Elkeszult
+  <OrderItem FoodID="2006",OrderID="5006",OrderItemID="1006">
+      
+  <OrderItem FoodID="2007",OrderID="5007",OrderItemID="1007">
+      
+  <Order OrderID="5005",RestaurantID="3005">
+      
+  <Order OrderID="5006",RestaurantID="3006">
+      
+  <Order OrderID="5007",RestaurantID="3007">
+      
+  <Restaurant RestaurantID="3005">
+      
+  <Restaurant RestaurantID="3006">
+      
+  <Restaurant RestaurantID="3007">
+      
+  <Food FoodID="2005">
+      
+  <Food FoodID="2006">
+      
+  <Food FoodID="2007">
+      
+  <Ingredient IngredientID="4005">
+      
+  <Ingredient IngredientID="4006">
+      
+  <Ingredient IngredientID="4007">
+      
+  <StockItem EmployeeID="7005",StockItemID="6005">
+      
+  <StockItem EmployeeID="7006",StockItemID="6006">
+      
+  <StockItem EmployeeID="7007",StockItemID="6007">
+      
+  <Employee EmployeeID="7005">
+      
+  <Employee EmployeeID="7006">
+      
+  <Employee EmployeeID="7007">
+      

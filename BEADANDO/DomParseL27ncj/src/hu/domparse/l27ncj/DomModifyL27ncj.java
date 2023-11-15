@@ -12,7 +12,6 @@ public class DomModifyL27ncj {
 		
 		Document doc = DomReadL27ncj.Read("XMLL27ncj.xml");
 		
-
 		// Add new nodes
         Element newEmployee = doc.createElement("Employee");
         newEmployee.setAttribute("EmployeeID", "7005");

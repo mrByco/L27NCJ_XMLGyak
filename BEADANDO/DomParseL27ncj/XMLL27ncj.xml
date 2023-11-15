@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<RestaurantOrderSystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                       xsi:noNamespaceSchemaLocation="your-schema.xsd">
+<L27NCJRestaurants xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xsi:noNamespaceSchemaLocation="XMLSchemaL27ncj.xsd">
     <!-- OrderItem Instances -->
     <OrderItem OrderItemID="1001" OrderID="5001" FoodID="2001">
         <Quantity>2</Quantity>
@@ -20,7 +20,7 @@
     </OrderItem>
 
     <!-- Order Instances -->
-    <Order OrderItemID="5001" RestaurantID="3001">
+    <Order OrderID="5001" RestaurantID="3001">
         <TotalPrice>7500.00</TotalPrice>
         <TasteRating>4.5</TasteRating>
         <ServiceRating>4.0</ServiceRating>
@@ -29,48 +29,53 @@
         <StartTime>2023-04-12T17:45:00</StartTime>
         <PaymentMethod>Készpénz</PaymentMethod>
     </Order>
-    <Order OrderItemID="5002" RestaurantID="3002">
+    <Order OrderID="5002" RestaurantID="3002">
         <TotalPrice>3200.00</TotalPrice>
         <StartTime>2023-04-13T12:00:00</StartTime>
         <PaymentMethod>Kártya</PaymentMethod>
     </Order>
-    <Order OrderItemID="5003" RestaurantID="3003">
+    <Order OrderID="5003" RestaurantID="3003">
         <TotalPrice>4500.00</TotalPrice>
         <StartTime>2023-04-14T20:15:00</StartTime>
         <PaymentMethod>Online</PaymentMethod>
     </Order>
-    <Order OrderItemID="5004" RestaurantID="3004">
+    <Order OrderID="5004" RestaurantID="3004">
         <TotalPrice>9800.00</TotalPrice>
         <StartTime>2023-04-15T13:30:00</StartTime>
         <PaymentMethod>Utánvét</PaymentMethod>
     </Order>
 
     <!-- Restaurant Instances -->
-    <Restaurant OrderItemID="3001" RestaurantID="3001">
+    <Restaurant RestaurantID="3001">
         <Address>
-            <Street>Kossuth Lajos utca 15</Street>
+            <Street>Kossuth Lajos utca</Street>
             <City>Budapest</City>
+            <Door>2</Door>
+            
         </Address>
         <Name>Étterem A</Name>
     </Restaurant>
-    <Restaurant OrderItemID="3002" RestaurantID="3002">
+    <Restaurant RestaurantID="3002">
         <Address>
-            <Street>Széchenyi tér 6</Street>
+            <Street>Széchenyi tér</Street>
             <City>Debrecen</City>
+            <Door>8</Door>
         </Address>
         <Name>Étterem B</Name>
     </Restaurant>
-    <Restaurant OrderItemID="3003" RestaurantID="3003">
+    <Restaurant RestaurantID="3003">
         <Address>
-            <Street>Attila út 22</Street>
+            <Street>Attila út</Street>
             <City>Szeged</City>
+            <Door>32</Door>
         </Address>
         <Name>Étterem C</Name>
     </Restaurant>
     <Restaurant OrderItemID="3004" RestaurantID="3004">
         <Address>
-            <Street>Vasvári Pál utca 9</Street>
+            <Street>Vasvári Pál utca</Street>
             <City>Pécs</City>
+            <Door>3</Door>
         </Address>
         <Name>Étterem D</Name>
     </Restaurant>
@@ -145,23 +150,22 @@
     <Employee EmployeeID="7001">
         <Name>Nagy István</Name>
         <IdCardNumber>ID12345678</IdCardNumber>
+    	<CapabilityName>Kiszállítás</CapabilityName>
     </Employee>
     <Employee EmployeeID="7002">
         <Name>Kovács Éva</Name>
         <IdCardNumber>ID87654321</IdCardNumber>
+    	<CapabilityName>Elvitel</CapabilityName>
     </Employee>
     <Employee EmployeeID="7003">
         <Name>Szabó Gábor</Name>
         <IdCardNumber>ID23456789</IdCardNumber>
+    	<CapabilityName>Asztalfoglalás</CapabilityName>
+    	<CapabilityName>Online rendelés</CapabilityName>
     </Employee>
     <Employee EmployeeID="7004">
         <Name>Tóth Anna</Name>
         <IdCardNumber>ID98765432</IdCardNumber>
+    	<CapabilityName>Online rendelés</CapabilityName>
     </Employee>
-
-    <!-- CapabilityName Instances -->
-    <CapabilityName>Kiszállítás</CapabilityName>
-    <CapabilityName>Elvitel</CapabilityName>
-    <CapabilityName>Asztalfoglalás</CapabilityName>
-    <CapabilityName>Online rendelés</CapabilityName>
-</RestaurantOrderSystem>
+</L27NCJRestaurants>

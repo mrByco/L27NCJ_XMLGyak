@@ -43,6 +43,7 @@
     <xs:element name="Name" type="xs:string"/>
     <xs:element name="Street" type="xs:string"/>
     <xs:element name="City" type="xs:string"/>
+    <xs:element name="Door" type="xs:positiveInteger"/>
     <xs:element name="Country" type="xs:string"/>
     <xs:element name="Price" type="currencyFormat"/>
     <xs:element name="ImageID" type="xs:positiveInteger"/>
@@ -50,7 +51,7 @@
     <xs:element name="IngredientID" type="xs:positiveInteger"/>
     <xs:element name="UnitPrice" type="currencyFormat"/>
     <xs:element name="MeasurementUnit" type="xs:string"/>
-    <xs:element name="CapabilityName" type="xs:string"/>
+    <xs:element name="CapabilityName" type="xs:string" />
     <xs:element name="EmployeeID" type="xs:positiveInteger"/>
     <xs:element name="StockItemID" type="xs:positiveInteger"/>
     <xs:element name="LastChecked" type="dateTimeFormat"/>
@@ -77,7 +78,7 @@
             <xs:element ref="StartTime"/>
             <xs:element ref="PaymentMethod"/>
         </xs:sequence>
-        <xs:attribute name="OrderItemID" type="xs:positiveInteger"></xs:attribute>
+        <xs:attribute name="OrderID" type="xs:positiveInteger"></xs:attribute>
         <xs:attribute name="RestaurantID" type="xs:positiveInteger"></xs:attribute>
     </xs:complexType>
 
@@ -88,7 +89,7 @@
 					<xs:sequence>
 			            <xs:element ref="Street"/>
 			            <xs:element ref="City"/>
-            			<xs:element ref="Street"/>
+            			<xs:element ref="Door"/>
 					</xs:sequence>
 	            </xs:complexType>
             </xs:element>
@@ -131,12 +132,13 @@
         <xs:sequence>
             <xs:element ref="Name"/>
             <xs:element ref="IdCardNumber"/>
+            <xs:element ref="CapabilityName" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="EmployeeID" type="xs:positiveInteger"></xs:attribute>
     </xs:complexType>
 
     <!-- Root Element -->
-    <xs:element name="RestaurantOrderSystem">
+    <xs:element name="L27NCJRestaurants">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="OrderItem" type="OrderItemType" minOccurs="0" maxOccurs="unbounded"/>
@@ -186,6 +188,8 @@
 	        <xs:selector xpath="Employee"/>
 	        <xs:field xpath="@EmployeeID"/>
 	    </xs:key>
+	    
+	    <!-- keyref, unique -->
         
     </xs:element>
 
