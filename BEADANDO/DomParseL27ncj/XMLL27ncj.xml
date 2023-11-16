@@ -2,7 +2,7 @@
 <L27NCJRestaurants xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                        xsi:noNamespaceSchemaLocation="XMLSchemaL27ncj.xsd">
     <!-- OrderItem Instances -->
-    <OrderItem OrderItemID="1001" OrderID="5001" FoodID="2001">
+    <OrderItem OrderItemID="1001" OrderID="50012" FoodID="2001">
         <Quantity>2</Quantity>
         <State>
         	Elkészült
@@ -109,66 +109,44 @@
         <Description>Édes magyar desszert.</Description>
     </Food>
 
-    <!-- Ingredient Instances -->
-    <Ingredient IngredientID="4001">
-        <Name>Paprika</Name>
-        <UnitPrice>500.00</UnitPrice>
-        <MeasurementUnit>gramm</MeasurementUnit>
-    </Ingredient>
-    <Ingredient IngredientID="4002">
-        <Name>Hagyma</Name>
-        <UnitPrice>200.00</UnitPrice>
-        <MeasurementUnit>darab</MeasurementUnit>
-    </Ingredient>
-    <Ingredient IngredientID="4003">
-        <Name>Marhahús</Name>
-        <UnitPrice>2200.00</UnitPrice>
-        <MeasurementUnit>kilogramm</MeasurementUnit>
-    </Ingredient>
-    <Ingredient IngredientID="4004">
-        <Name>Sertéshús</Name>
-        <UnitPrice>1800.00</UnitPrice>
-        <MeasurementUnit>kilogramm</MeasurementUnit>
-    </Ingredient>
-
     <!-- StockItem Instances -->
-    <StockItem StockItemID="6001" EmployeeID="7001">
+    <StockItem StockItemID="6001" RestaurantID="5001">
         <LastChecked>2023-04-11T10:00:00</LastChecked>
         <Quantity>50</Quantity>
     </StockItem>
-    <StockItem StockItemID="6002" EmployeeID="7002">
+    <StockItem StockItemID="6002" RestaurantID="5002">
         <LastChecked>2023-04-12T15:30:00</LastChecked>
         <Quantity>30</Quantity>
     </StockItem>
-    <StockItem StockItemID="6003" EmployeeID="7003">
+    <StockItem StockItemID="6003" RestaurantID="5001">
         <LastChecked>2023-04-13T09:20:00</LastChecked>
         <Quantity>20</Quantity>
     </StockItem>
-    <StockItem StockItemID="6004" EmployeeID="7004">
+    <StockItem StockItemID="6004" RestaurantID="5003">
         <LastChecked>2023-04-14T11:45:00</LastChecked>
         <Quantity>40</Quantity>
     </StockItem>
 
     <!-- Employee Instances -->
-    <Employee EmployeeID="7001">
+    <Owner OwnerID="7001" RestaurantID="5001">
         <Name>Nagy István</Name>
-        <IdCardNumber>ID12345678</IdCardNumber>
-    	<CapabilityName>Kiszállítás</CapabilityName>
-    </Employee>
-    <Employee EmployeeID="7002">
+        <NetWorth>5000</NetWorth>
+        <CapabilityName>Vendéglátó ipari diploma</CapabilityName>
+    </Owner>
+    <Owner OwnerID="7002" RestaurantID="5002">
         <Name>Kovács Éva</Name>
-        <IdCardNumber>ID87654321</IdCardNumber>
-    	<CapabilityName>Elvitel</CapabilityName>
-    </Employee>
-    <Employee EmployeeID="7003">
+        <NetWorth>8000</NetWorth>
+    	<CapabilityName>Befektető</CapabilityName>
+    </Owner>
+    <Owner OwnerID="7003" RestaurantID="5003">
         <Name>Szabó Gábor</Name>
-        <IdCardNumber>ID23456789</IdCardNumber>
-    	<CapabilityName>Asztalfoglalás</CapabilityName>
-    	<CapabilityName>Online rendelés</CapabilityName>
-    </Employee>
-    <Employee EmployeeID="7004">
+        <NetWorth>20000</NetWorth>
+    	<CapabilityName>Tőzsde</CapabilityName>
+    	<CapabilityName>Kereskedelem</CapabilityName>
+    </Owner>
+    <Owner OwnerID="7004" RestaurantID="5004">
         <Name>Tóth Anna</Name>
-        <IdCardNumber>ID98765432</IdCardNumber>
-    	<CapabilityName>Online rendelés</CapabilityName>
-    </Employee>
+        <NetWorth>3000</NetWorth>
+    	<CapabilityName>Szakács</CapabilityName>
+    </Owner>
 </L27NCJRestaurants>
