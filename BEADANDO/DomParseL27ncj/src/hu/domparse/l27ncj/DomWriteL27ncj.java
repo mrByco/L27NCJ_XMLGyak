@@ -41,12 +41,16 @@ public class DomWriteL27ncj {
 			orderItem1.setAttribute("OrderItemID", "1005");
 			orderItem1.setAttribute("OrderID", "5005");
 			orderItem1.setAttribute("FoodID", "2005");
+			orderItem1.setTextContent(" ");
+			rootElement.appendChild(orderItem1);
+			
+			
+			DomReadL27ncj.PrintNode(rootElement, 0, System.out);
 			
 			Element state = doc.createElement("State");
-			state.setTextContent("Elkeszult");
+			//state.setTextContent("Elkeszult");
 			
 			orderItem1.appendChild(state);
-			rootElement.appendChild(orderItem1);
 
 			Element orderItem2 = doc.createElement("OrderItem");
 			orderItem2.setAttribute("OrderItemID", "1006");
@@ -162,13 +166,13 @@ public class DomWriteL27ncj {
 
 		try {
 
-			PrintStream stream = new PrintStream(file);
+			PrintStream fileStream = new PrintStream(file);
 
 			// Write the prolog first
-			stream.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
-			DomReadL27ncj.PrintNode(doc.getDocumentElement(), 0, stream);
+			fileStream.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+			DomReadL27ncj.PrintNode(doc.getDocumentElement(), 0, fileStream);
 
-			stream.close();
+			fileStream.close();
 
 			System.out.println("File is succesfully writen to: " + file.getAbsolutePath());
 			System.out.println("NOTE, THE FILE WON-T BE ADDED AUTOMATICALLY TO ECLIPSE");
