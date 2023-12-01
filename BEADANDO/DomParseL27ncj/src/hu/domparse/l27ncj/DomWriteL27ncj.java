@@ -45,8 +45,6 @@ public class DomWriteL27ncj {
 			rootElement.appendChild(orderItem1);
 			
 			
-			DomReadL27ncj.PrintNode(rootElement, 0, System.out);
-			
 			Element state = doc.createElement("State");
 			//state.setTextContent("Elkeszult");
 			
@@ -57,6 +55,9 @@ public class DomWriteL27ncj {
 			orderItem2.setAttribute("OrderID", "5006");
 			orderItem2.setAttribute("FoodID", "2006");
 			rootElement.appendChild(orderItem2);
+			
+
+			
 
 			Element orderItem3 = doc.createElement("OrderItem");
 			orderItem3.setAttribute("OrderItemID", "1007");
@@ -147,6 +148,9 @@ public class DomWriteL27ncj {
 			Element employee3 = doc.createElement("Employee");
 			employee3.setAttribute("EmployeeID", "7007");
 			rootElement.appendChild(employee3);
+			
+
+			DomReadL27ncj.PrintNode(rootElement, 0, System.out);
 
 		} catch (ParserConfigurationException e1) {
 			// TODO Auto-generated catch block
@@ -155,7 +159,9 @@ public class DomWriteL27ncj {
 		if (doc == null) {
 			return;
 		}
-
+		
+		return;
+		/*
 		DomReadL27ncj.PrintNode(doc.getDocumentElement(), 0, System.out);
 
 		File file = new File("XMLL27ncj-copy.xml");
@@ -178,7 +184,7 @@ public class DomWriteL27ncj {
 			System.out.println("NOTE, THE FILE WON-T BE ADDED AUTOMATICALLY TO ECLIPSE");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
-		}
+		}*/
 
 	}
 }

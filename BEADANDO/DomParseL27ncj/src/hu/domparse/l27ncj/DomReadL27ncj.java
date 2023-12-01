@@ -76,6 +76,7 @@ public class DomReadL27ncj {
          
             	Node child = children.item(i);
             	var subChildren = child.getChildNodes();
+            	
             	var nodeName = child.getNodeName();
             	if (nodeName == "#text") {
             		//stream.print(child.getTextContent());
@@ -88,6 +89,7 @@ public class DomReadL27ncj {
 
             	if (subChildren.getLength() > 1) {
                 	PrintNode(child, indenting + 1, stream);
+                	
             	}else if (child.getTextContent().length() > 0) {
             		// Print start and end node
             		if (nodeName != "#text") {
@@ -99,6 +101,8 @@ public class DomReadL27ncj {
             		if (nodeName != "#text") {
                 		stream.print("</" + nodeName + ">");
             		}
+            	} else {
+            		PrintNode(child, 0, stream);
             	}
             }
     	}else {
