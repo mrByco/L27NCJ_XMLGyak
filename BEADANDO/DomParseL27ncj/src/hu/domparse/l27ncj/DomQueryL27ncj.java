@@ -15,19 +15,19 @@ public class DomQueryL27ncj {
     public static void main(String[] args) {
         Document doc = DomReadL27ncj.Read("XMLL27ncj.xml");
 
-        // Query 1: Find the cheapest food
+        // Lekérdezés: Legolcsóbb étel
         findCheapestFood(doc);
 
-        // Query 2: Find the highest-rated restaurant (assumed to have a TasteRating)
+        // Legérdezés, étterem a legjobb ízzel
         findHighestRatedRestaurant(doc);
 
-        // Query 3: Find the most expensive ingredient
+        // Lekérdezés, legdrágább hozzávaló
         findMostExpensiveIngredient(doc);
 
-        // Query 4: Find the latest payment date (assumed to be in Order elements)
+        // Lekérdezés, Legutóbbi befizetés
         findLatestPaymentDate(doc);
 
-        // Query 5: Find the employee with the longest name
+        // Lekérdezés: Leghosszabb nevű alkalmazott
         findEmployeeWithLongestName(doc);
     }
 
