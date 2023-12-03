@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<L27NCJRestaurants xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XMLSchemaL27ncj.xsd">
+    <OrderItem FoodID="2001" OrderID="5001" OrderItemID="1001">
+        <Quantity>2</Quantity>
+        <State>Elkészült</State>
+    </OrderItem>
+    <OrderItem FoodID="2002" OrderID="5002" OrderItemID="1002">
+        <Quantity>1</Quantity>
+        <State>Folyamatban</State>
+    </OrderItem>
+    <OrderItem FoodID="2003" OrderID="5003" OrderItemID="1003">
+        <Quantity>3</Quantity>
+        <State>Kiszállítva</State>
+    </OrderItem>
+    <OrderItem FoodID="2004" OrderID="5004" OrderItemID="1004">
+        <Quantity>4</Quantity>
+        <State>Megrendelve</State>
+    </OrderItem>
+    <Order OrderID="5001" RestaurantID="3001">
+        <TotalPrice>7500.00</TotalPrice>
+        <TasteRating>4.5</TasteRating>
+        <ServiceRating>4.0</ServiceRating>
+        <PaymentDate>2023-04-12T18:30:00</PaymentDate>
+        <CompletionTime>2023-04-12T19:00:00</CompletionTime>
+        <StartTime>2023-04-12T17:45:00</StartTime>
+        <PaymentMethod>Készpénz</PaymentMethod>
+    </Order>
+    <Order OrderID="5002" RestaurantID="3002">
+        <TotalPrice>3200.00</TotalPrice>
+        <TasteRating/>
+        <ServiceRating/>
+        <PaymentDate>2023-04-13T12:00:00</PaymentDate>
+        <CompletionTime/>
+        <StartTime/>
+        <PaymentMethod>Kártya</PaymentMethod>
+    </Order>
+    <Order OrderID="5003" RestaurantID="3003">
+        <TotalPrice>4500.00</TotalPrice>
+        <TasteRating/>
+        <ServiceRating/>
+        <PaymentDate>2023-04-14T20:15:00</PaymentDate>
+        <CompletionTime/>
+        <StartTime/>
+        <PaymentMethod>Online</PaymentMethod>
+    </Order>
+    <Order OrderID="5004" RestaurantID="3004">
+        <TotalPrice>9800.00</TotalPrice>
+        <TasteRating/>
+        <ServiceRating/>
+        <PaymentDate>2023-04-15T13:30:00</PaymentDate>
+        <CompletionTime/>
+        <StartTime/>
+        <PaymentMethod>Utánvét</PaymentMethod>
+    </Order>
+    <Restaurant RestaurantID="3001">
+        <Address>
+            <Street>Kossuth Lajos utca</Street>
+            <City>Budapest</City>
+            <Door>2</Door>
+        </Address>
+        <Name>Étterem A</Name>
+    </Restaurant>
+    <Restaurant RestaurantID="3002">
+        <Address>
+            <Street>Széchenyi tér</Street>
+            <City>Debrecen</City>
+            <Door>8</Door>
+        </Address>
+        <Name>Étterem B</Name>
+    </Restaurant>
+</L27NCJRestaurants>
+

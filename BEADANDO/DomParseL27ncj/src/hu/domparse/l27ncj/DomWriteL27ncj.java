@@ -9,6 +9,9 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.io.StringWriter;
 
 import org.w3c.dom.Document;
@@ -47,6 +50,25 @@ public class DomWriteL27ncj {
 
         // Output the XML content
         System.out.println(XMLUtils.convertDocumentToString(doc));
+        
+        
+        // Write the xml stirng into a file
+        String xmlString = XMLUtils.convertDocumentToString(doc);
+        
+        try {
+        	String filename = "XMLL27ncj1.xml";
+        	PrintWriter writer = new PrintWriter(new FileWriter(filename), true);
+        	writer.println(xmlString);
+        	writer.close();
+        	System.out.println("File write is completed. Note that generated files are not added automatically to eclipse!");
+        	
+        }
+        catch (Exception e) {
+        	System.out.println("An error has happend during file write!");
+        	e.printStackTrace();
+        }
+        
+        
     }
 
     private static Document createNewDocument() {
