@@ -1,4 +1,4 @@
-package xpathc0ller;
+package xpathl27ncj;
 
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.FileInputStream;
 
-public class xPathC0LLER {
+public class xPathL27NCJ {
 
 	public static void main(String[] args) {
         try {

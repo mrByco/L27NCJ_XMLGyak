@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
-    xs:noNamespaceSchemaLocation="studentC0LLER.xsd">
+    xs:noNamespaceSchemaLocation="studentL27NCJ.xsd">
 
     <student id="01">
         <keresztnev>Mátyás</keresztnev>

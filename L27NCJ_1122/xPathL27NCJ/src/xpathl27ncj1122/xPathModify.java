@@ -36,7 +36,7 @@ public class xPathModify {
 
             printDocument(document);
 
-            saveDocument(document, "kurzusfelvetelC0LLERModified.xml");
+            saveDocument(document, "kurzusfelvetelL27NCJModified.xml");
 
         } catch (ParserConfigurationException | IOException | org.xml.sax.SAXException | TransformerException | XPathExpressionException e) {
             e.printStackTrace();

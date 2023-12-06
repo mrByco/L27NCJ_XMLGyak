@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<C0LLER_kurzusfelvetel tanev="3" egyetem="ME">
+<L27NCJ_kurzusfelvetel tanev="3" egyetem="ME">
     <hallgato>
         <hnev>Biszterszky Mátyás</hnev>
         <szulev>2001</szulev>
@@ -44,4 +44,4 @@
             <oktato>Dr. Sasvári Péter</oktato>
         </kurzus>
     </kurzusok>
-</C0LLER_kurzusfelvetel>
+</L27NCJ_kurzusfelvetel>
