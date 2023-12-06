@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation="studentC0LLER.xsd">
+
+    <student id="01">
+        <keresztnev>Mátyás</keresztnev>
+        <vezeteknev>Biszterszky</vezeteknev>
+        <becenev>Nem</becenev>
+        <kor>22</kor>
+    </student>
+
+    <student id="02">
+        <keresztnev>Kiss</keresztnev>
+        <vezeteknev>Róbert</vezeteknev>
+        <becenev>Robi</becenev>
+        <kor>26</kor>
+    </student>
+
+    <student id="03">
+        <keresztnev>Klaudia</keresztnev>
+        <vezeteknev>Fehér</vezeteknev>
+        <becenev>Klau</becenev>
+        <kor>23</kor>
+    </student>
+</class>
