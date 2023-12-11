@@ -37,12 +37,12 @@ public class DomWriteL27ncj {
         // Add Order elements
         addOrder(doc, rootElement, "5001", "3001", "7500.00", "4.5", "4.0",
                 "2023-04-12T18:30:00", "2023-04-12T19:00:00", "2023-04-12T17:45:00", "Készpénz");
-        addOrder(doc, rootElement, "5002", "3002", "3200.00", null, null,
-                "2023-04-13T12:00:00", null, null, "Kártya");
-        addOrder(doc, rootElement, "5003", "3003", "4500.00", null, null,
-                "2023-04-14T20:15:00", null, null, "Online");
-        addOrder(doc, rootElement, "5004", "3004", "9800.00", null, null,
-                "2023-04-15T13:30:00", null, null, "Utánvét");
+        addOrder(doc, rootElement, "5002", "3002", "3200.00",  "4.5", "4.0",
+                "2023-04-13T12:00:00", "2023-04-12T19:00:00", "2023-04-12T17:45:00", "Kártya");
+        addOrder(doc, rootElement, "5003", "3003", "4500.00",  "4.5", "4.0",
+                "2023-04-14T20:15:00", "2023-04-12T19:00:00", "2023-04-12T17:45:00", "Online");
+        addOrder(doc, rootElement, "5004", "3004", "9800.00",  "4.5", "4.0",
+                "2023-04-15T13:30:00", "2023-04-12T19:00:00", "2023-04-12T17:45:00",  "Utánvét");
 
         // Add Restaurant elements
         addRestaurant(doc, rootElement, "3001", "Kossuth Lajos utca", "Budapest", "2", "Étterem A");
@@ -56,7 +56,7 @@ public class DomWriteL27ncj {
         String xmlString = XMLUtils.convertDocumentToString(doc);
         
         try {
-        	String filename = "XMLL27ncj1.xml";
+        	String filename = "XMLL27ncj2.xml";
         	PrintWriter writer = new PrintWriter(new FileWriter(filename), true);
         	writer.println(xmlString);
         	writer.close();

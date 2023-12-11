@@ -27,29 +27,29 @@
     </Order>
     <Order OrderID="5002" RestaurantID="3002">
         <TotalPrice>3200.00</TotalPrice>
-        <TasteRating/>
-        <ServiceRating/>
+        <TasteRating>4.5</TasteRating>
+        <ServiceRating>4.0</ServiceRating>
         <PaymentDate>2023-04-13T12:00:00</PaymentDate>
-        <CompletionTime/>
-        <StartTime/>
+        <CompletionTime>2023-04-12T19:00:00</CompletionTime>
+        <StartTime>2023-04-12T17:45:00</StartTime>
         <PaymentMethod>Kártya</PaymentMethod>
     </Order>
     <Order OrderID="5003" RestaurantID="3003">
         <TotalPrice>4500.00</TotalPrice>
-        <TasteRating/>
-        <ServiceRating/>
+        <TasteRating>4.5</TasteRating>
+        <ServiceRating>4.0</ServiceRating>
         <PaymentDate>2023-04-14T20:15:00</PaymentDate>
-        <CompletionTime/>
-        <StartTime/>
+        <CompletionTime>2023-04-12T19:00:00</CompletionTime>
+        <StartTime>2023-04-12T17:45:00</StartTime>
         <PaymentMethod>Online</PaymentMethod>
     </Order>
     <Order OrderID="5004" RestaurantID="3004">
         <TotalPrice>9800.00</TotalPrice>
-        <TasteRating/>
-        <ServiceRating/>
+        <TasteRating>4.5</TasteRating>
+        <ServiceRating>4.0</ServiceRating>
         <PaymentDate>2023-04-15T13:30:00</PaymentDate>
-        <CompletionTime/>
-        <StartTime/>
+        <CompletionTime>2023-04-12T19:00:00</CompletionTime>
+        <StartTime>2023-04-12T17:45:00</StartTime>
         <PaymentMethod>Utánvét</PaymentMethod>
     </Order>
     <Restaurant RestaurantID="3001">

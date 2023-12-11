@@ -18,8 +18,7 @@
     </OrderItem>
     <OrderItem OrderItemID="1004" OrderID="5004" FoodID="2004">
         <Quantity>4</Quantity>
-        <State>
-        	Megrendelve</State>
+        <State>Megrendelve</State>
     </OrderItem>
 
     <!-- Order Instances -->
