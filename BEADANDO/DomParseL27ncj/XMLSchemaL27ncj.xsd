@@ -1,227 +1,193 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
-	 <!-- Simple Types -->
-    <xs:simpleType name="nonNegativeInteger">
-        <xs:restriction base="xs:integer">
-            <xs:minInclusive value="0"/>
-        </xs:restriction>
-    </xs:simpleType>
-
-    <xs:simpleType name="dateTimeFormat">
-        <xs:restriction base="xs:dateTime"/>
-    </xs:simpleType>
-
-    <xs:simpleType name="currencyFormat">
-        <xs:restriction base="xs:decimal">
-            <xs:fractionDigits value="2"/>
-        </xs:restriction>
-    </xs:simpleType>
-
-    <xs:simpleType name="ratingType">
-        <xs:restriction base="xs:decimal">
-            <xs:minInclusive value="0"/>
-            <xs:maxInclusive value="5"/>
-            <xs:fractionDigits value="1"/>
-        </xs:restriction>
-    </xs:simpleType>
-
-	    <!-- Primitive Types -->
-    <xs:element name="OrderItemID" type="xs:positiveInteger"/>
-    <xs:element name="Quantity" type="xs:positiveInteger"/>
-    <xs:element name="State" type="xs:string"/>
-    <xs:element name="OrderID" type="xs:positiveInteger"/>
-    <xs:element name="FoodID" type="xs:positiveInteger"/>
-    <xs:element name="TotalPrice" type="currencyFormat"/>
-    <xs:element name="TasteRating" type="ratingType"/>
-    <xs:element name="ServiceRating" type="ratingType"/>
-    <xs:element name="PaymentDate" type="dateTimeFormat"/>
-    <xs:element name="CompletionTime" type="dateTimeFormat"/>
-    <xs:element name="StartTime" type="dateTimeFormat"/>
-    <xs:element name="PaymentMethod" type="xs:string"/>
-    <xs:element name="RestaurantID" type="xs:positiveInteger"/>
-    <xs:element name="Name" type="xs:string"/>
-    <xs:element name="Street" type="xs:string"/>
-    <xs:element name="City" type="xs:string"/>
-    <xs:element name="Door" type="xs:positiveInteger"/>
-    <xs:element name="Country" type="xs:string"/>
-    <xs:element name="Price" type="currencyFormat"/>
-    <xs:element name="ImageID" type="xs:positiveInteger"/>
-    <xs:element name="Description" type="xs:string"/>
-    <xs:element name="IngredientID" type="xs:positiveInteger"/>
-    <xs:element name="NetWorth" type="currencyFormat"/>
-    <xs:element name="MeasurementUnit" type="xs:string"/>
-    <xs:element name="CapabilityName" type="xs:string" />
-    <xs:element name="EmployeeID" type="xs:positiveInteger"/>
-    <xs:element name="StockItemID" type="xs:positiveInteger"/>
-    <xs:element name="LastChecked" type="dateTimeFormat"/>
-    <xs:element name="IdCardNumber" type="xs:string"/>
-
-     <!-- Complex Types with References -->
-    <xs:complexType name="OrderItemType">
-        <xs:sequence>
-            <xs:element ref="Quantity"/>
-            <xs:element ref="State"/>
-        </xs:sequence>
-        <xs:attribute name="OrderItemID" type="xs:positiveInteger"/>
-        <xs:attribute name="OrderID" type="xs:positiveInteger"/>
-        <xs:attribute name="FoodID" type="xs:positiveInteger"/>
-    </xs:complexType>
-
-    <xs:complexType name="OrderType">
-        <xs:sequence>
-            <xs:element ref="TotalPrice"/>
-            <xs:element ref="TasteRating" minOccurs="0"/>
-            <xs:element ref="ServiceRating" minOccurs="0"/>
-            <xs:element ref="PaymentDate" minOccurs="0"/>
-            <xs:element ref="CompletionTime" minOccurs="0"/>
-            <xs:element ref="StartTime"/>
-            <xs:element ref="PaymentMethod"/>
-        </xs:sequence>
-        <xs:attribute name="OrderID" type="xs:positiveInteger"/>
-        <xs:attribute name="RestaurantID" type="xs:positiveInteger"/>
-    </xs:complexType>
-
-    <xs:complexType name="RestaurantType">
-        <xs:sequence>
-            <xs:element name="Address">
-	            <xs:complexType>
-					<xs:sequence>
-			            <xs:element ref="Street"/>
-			            <xs:element ref="City"/>
-            			<xs:element ref="Door"/>
-					</xs:sequence>
-	            </xs:complexType>
-            </xs:element>
-            <xs:element ref="Name"/>
-        </xs:sequence>
-        <xs:attribute name="RestaurantID" type="xs:positiveInteger"/>
-        <xs:attribute name="OrderItemID" type="xs:positiveInteger"/>
-    </xs:complexType>
-
-    <xs:complexType name="FoodType">
-        <xs:sequence>
-            <xs:element ref="FoodID"/>
-            <xs:element ref="Name"/>
-            <xs:element ref="Price"/>
-            <xs:element ref="ImageID" minOccurs="0"/>
-            <xs:element ref="Description"/>
-        </xs:sequence>
-        <xs:attribute name="FoodID" type="xs:positiveInteger"/>
-        <xs:attribute name="RestaurantID" type="xs:positiveInteger"/>
-    </xs:complexType>
-
-    <xs:complexType name="OwnerType">
-        <xs:sequence>
-            <xs:element ref="Name"/>
-            <xs:element ref="NetWorth"/>
-            <xs:element ref="CapabilityName" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-        <xs:attribute name="OwnerID" type="xs:positiveInteger"/>
-        <xs:attribute name="RestaurantID" type="xs:positiveInteger"/>
-    </xs:complexType>
-
-    <xs:complexType name="StockItemType">
-        <xs:sequence>
-            <xs:element ref="LastChecked"/>
-            <xs:element ref="Quantity"/>
-        </xs:sequence>
-        <xs:attribute name="StockItemID" type="xs:positiveInteger"/>
-        <xs:attribute name="RestaurantID" type="xs:positiveInteger"/>
-    </xs:complexType>
-
-    <!-- Root Element -->
-    <xs:element name="L27NCJRestaurants">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="OrderItem" type="OrderItemType" minOccurs="0" maxOccurs="unbounded"/>
-                <xs:element name="Order" type="OrderType" minOccurs="0" maxOccurs="unbounded"/>
-                <xs:element name="Restaurant" type="RestaurantType" minOccurs="0" maxOccurs="unbounded"/>
-                <xs:element name="Food" type="FoodType" minOccurs="0" maxOccurs="unbounded"/>
-                <xs:element name="StockItem" type="StockItemType" minOccurs="0" maxOccurs="unbounded"/>
-                <xs:element name="Owner" type="OwnerType" minOccurs="0" maxOccurs="unbounded"/>
-            </xs:sequence>
-        </xs:complexType>
-       
-
-	    <!-- Primary Keys -->
-	    <xs:key name="OrderItemKey">
-	        <xs:selector xpath="OrderItem"/>
-	        <xs:field xpath="@OrderItemID"/>
-	    </xs:key>
-	
-	    <xs:key name="OrderKey">
-	        <xs:selector xpath="Order"/>
-	        <xs:field xpath="@OrderID"/>
-	    </xs:key>
-	
-	    <xs:key name="RestaurantKey">
-	        <xs:selector xpath="Restaurant"/>
-	        <xs:field xpath="@RestaurantID"/>
-	    </xs:key>
-	
-	    <xs:key name="FoodKey">
-	        <xs:selector xpath="Food"/>
-	        <xs:field xpath="@FoodID"/>
-	    </xs:key>
-	
-	    <xs:key name="IngredientKey">
-	        <xs:selector xpath="Ingredient"/>
-	        <xs:field xpath="@IngredientID"/>
-	    </xs:key>
-	
-	    <xs:key name="StockItemKey">
-	        <xs:selector xpath="StockItem"/>
-	        <xs:field xpath="@StockItemID"/>
-	    </xs:key>
-	
-	    <xs:key name="EmployeeKey">
-	        <xs:selector xpath="Employee"/>
-	        <xs:field xpath="@EmployeeID"/>
-	    </xs:key>
-	    
-	    <!-- keyref, unique -->
-        
-        <xs:keyref name="OrderItem_OrderID" refer="OrderKey">
-            <xs:selector xpath="OrderItem"/>
-            <xs:field xpath="@Order"/>
-        </xs:keyref>
-
-        <xs:keyref name="Order_FoodID" refer="FoodKey">
-            <xs:selector xpath="OrderItem"/>
-            <xs:field xpath="@Order"/>
-        </xs:keyref>
-
-        <xs:keyref name="Order_RestaurantID" refer="RestaurantKey">
-            <xs:selector xpath="Order"/>
-            <xs:field xpath="@Restaurant"/>
-        </xs:keyref>
-
-        <xs:keyref name="Restaurant_FoodID" refer="RestaurantKey">
-            <xs:selector xpath="Food"/>
-            <xs:field xpath="@Restaurant"/>
-        </xs:keyref>
-
-        <xs:keyref name="StockItem_RestaurantID" refer="RestaurantKey">
-            <xs:selector xpath="StockItem"/>
-            <xs:field xpath="@Restaurant"/>
-        </xs:keyref>
-
-        <xs:keyref name="Owner_RestaurantID" refer="RestaurantKey">
-            <xs:selector xpath="Owner"/>
-            <xs:field xpath="@Restaurant"/>
-        </xs:keyref>
-
-
-        <!-- Future unique -->
-
-        <xs:unique name="Owner_RestaurantID_one_to_one">
-            <xs:selector xpath="Owner"/>
-            <xs:field xpath="@Restaurant"/>
-        </xs:unique>
-
-
-        
-    </xs:element>
-
+   <!-- Simple Types -->
+   <xs:simpleType name="nonNegativeInteger">
+      <xs:restriction base="xs:integer">
+         <xs:minInclusive value="0" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="dateTimeFormat">
+      <xs:restriction base="xs:dateTime" />
+   </xs:simpleType>
+   <xs:simpleType name="currencyFormat">
+      <xs:restriction base="xs:decimal">
+         <xs:fractionDigits value="2" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="ratingType">
+      <xs:restriction base="xs:decimal">
+         <xs:minInclusive value="0" />
+         <xs:maxInclusive value="5" />
+         <xs:fractionDigits value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <!-- Primitive Types -->
+   <xs:element name="OrderItemID" type="xs:positiveInteger" />
+   <xs:element name="Quantity" type="xs:positiveInteger" />
+   <xs:element name="State" type="xs:string" />
+   <xs:element name="OrderID" type="xs:positiveInteger" />
+   <xs:element name="FoodID" type="xs:positiveInteger" />
+   <xs:element name="TotalPrice" type="currencyFormat" />
+   <xs:element name="TasteRating" type="ratingType" />
+   <xs:element name="ServiceRating" type="ratingType" />
+   <xs:element name="PaymentDate" type="dateTimeFormat" />
+   <xs:element name="CompletionTime" type="dateTimeFormat" />
+   <xs:element name="StartTime" type="dateTimeFormat" />
+   <xs:element name="PaymentMethod" type="xs:string" />
+   <xs:element name="RestaurantID" type="xs:positiveInteger" />
+   <xs:element name="Name" type="xs:string" />
+   <xs:element name="Street" type="xs:string" />
+   <xs:element name="City" type="xs:string" />
+   <xs:element name="Door" type="xs:positiveInteger" />
+   <xs:element name="Country" type="xs:string" />
+   <xs:element name="Price" type="currencyFormat" />
+   <xs:element name="ImageID" type="xs:positiveInteger" />
+   <xs:element name="Description" type="xs:string" />
+   <xs:element name="IngredientID" type="xs:positiveInteger" />
+   <xs:element name="NetWorth" type="currencyFormat" />
+   <xs:element name="MeasurementUnit" type="xs:string" />
+   <xs:element name="CapabilityName" type="xs:string" />
+   <xs:element name="EmployeeID" type="xs:positiveInteger" />
+   <xs:element name="StockItemID" type="xs:positiveInteger" />
+   <xs:element name="LastChecked" type="dateTimeFormat" />
+   <xs:element name="IdCardNumber" type="xs:string" />
+   <!-- Complex Types with References -->
+   <xs:complexType name="OrderItemType">
+      <xs:sequence>
+         <xs:element ref="Quantity" />
+         <xs:element ref="State" />
+      </xs:sequence>
+      <xs:attribute name="OrderItemID" type="xs:positiveInteger" />
+      <xs:attribute name="OrderID" type="xs:positiveInteger" />
+      <xs:attribute name="FoodID" type="xs:positiveInteger" />
+   </xs:complexType>
+   <xs:complexType name="OrderType">
+      <xs:sequence>
+         <xs:element ref="TotalPrice" />
+         <xs:element ref="TasteRating" minOccurs="0" />
+         <xs:element ref="ServiceRating" minOccurs="0" />
+         <xs:element ref="PaymentDate" minOccurs="0" />
+         <xs:element ref="CompletionTime" minOccurs="0" />
+         <xs:element ref="StartTime" />
+         <xs:element ref="PaymentMethod" />
+      </xs:sequence>
+      <xs:attribute name="OrderID" type="xs:positiveInteger" />
+      <xs:attribute name="RestaurantID" type="xs:positiveInteger" />
+   </xs:complexType>
+   <xs:complexType name="RestaurantType">
+      <xs:sequence>
+         <xs:element name="Address">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="Street" />
+                  <xs:element ref="City" />
+                  <xs:element ref="Door" />
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element ref="Name" />
+      </xs:sequence>
+      <xs:attribute name="RestaurantID" type="xs:positiveInteger" />
+      <xs:attribute name="OrderItemID" type="xs:positiveInteger" />
+   </xs:complexType>
+   <xs:complexType name="FoodType">
+      <xs:sequence>
+         <xs:element ref="FoodID" />
+         <xs:element ref="Name" />
+         <xs:element ref="Price" />
+         <xs:element ref="ImageID" minOccurs="0" />
+         <xs:element ref="Description" />
+      </xs:sequence>
+      <xs:attribute name="FoodID" type="xs:positiveInteger" />
+      <xs:attribute name="RestaurantID" type="xs:positiveInteger" />
+   </xs:complexType>
+   <xs:complexType name="OwnerType">
+      <xs:sequence>
+         <xs:element ref="Name" />
+         <xs:element ref="NetWorth" />
+         <xs:element ref="CapabilityName" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="OwnerID" type="xs:positiveInteger" />
+      <xs:attribute name="RestaurantID" type="xs:positiveInteger" />
+   </xs:complexType>
+   <xs:complexType name="StockItemType">
+      <xs:sequence>
+         <xs:element ref="LastChecked" />
+         <xs:element ref="Quantity" />
+      </xs:sequence>
+      <xs:attribute name="StockItemID" type="xs:positiveInteger" />
+      <xs:attribute name="RestaurantID" type="xs:positiveInteger" />
+   </xs:complexType>
+   <!-- Root Element -->
+   <xs:element name="L27NCJRestaurants">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="OrderItem" type="OrderItemType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="Order" type="OrderType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="Restaurant" type="RestaurantType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="Food" type="FoodType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="StockItem" type="StockItemType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="Owner" type="OwnerType" minOccurs="0" maxOccurs="unbounded" />
+         </xs:sequence>
+      </xs:complexType>
+      <!-- Primary Keys -->
+      <xs:key name="OrderItemKey">
+         <xs:selector xpath="OrderItem" />
+         <xs:field xpath="@OrderItemID" />
+      </xs:key>
+      <xs:key name="OrderKey">
+         <xs:selector xpath="Order" />
+         <xs:field xpath="@OrderID" />
+      </xs:key>
+      <xs:key name="RestaurantKey">
+         <xs:selector xpath="Restaurant" />
+         <xs:field xpath="@RestaurantID" />
+      </xs:key>
+      <xs:key name="FoodKey">
+         <xs:selector xpath="Food" />
+         <xs:field xpath="@FoodID" />
+      </xs:key>
+      <xs:key name="IngredientKey">
+         <xs:selector xpath="Ingredient" />
+         <xs:field xpath="@IngredientID" />
+      </xs:key>
+      <xs:key name="StockItemKey">
+         <xs:selector xpath="StockItem" />
+         <xs:field xpath="@StockItemID" />
+      </xs:key>
+      <xs:key name="EmployeeKey">
+         <xs:selector xpath="Employee" />
+         <xs:field xpath="@EmployeeID" />
+      </xs:key>
+      <!-- keyref, unique -->
+      <xs:keyref name="OrderItem_OrderID" refer="OrderKey">
+         <xs:selector xpath="OrderItem" />
+         <xs:field xpath="@Order" />
+      </xs:keyref>
+      <xs:keyref name="Order_FoodID" refer="FoodKey">
+         <xs:selector xpath="OrderItem" />
+         <xs:field xpath="@Order" />
+      </xs:keyref>
+      <xs:keyref name="Order_RestaurantID" refer="RestaurantKey">
+         <xs:selector xpath="Order" />
+         <xs:field xpath="@Restaurant" />
+      </xs:keyref>
+      <xs:keyref name="Restaurant_FoodID" refer="RestaurantKey">
+         <xs:selector xpath="Food" />
+         <xs:field xpath="@Restaurant" />
+      </xs:keyref>
+      <xs:keyref name="StockItem_RestaurantID" refer="RestaurantKey">
+         <xs:selector xpath="StockItem" />
+         <xs:field xpath="@Restaurant" />
+      </xs:keyref>
+      <xs:keyref name="Owner_RestaurantID" refer="RestaurantKey">
+         <xs:selector xpath="Owner" />
+         <xs:field xpath="@Restaurant" />
+      </xs:keyref>
+      <!-- Future unique -->
+      <xs:unique name="Owner_RestaurantID_one_to_one">
+         <xs:selector xpath="Owner" />
+         <xs:field xpath="@Restaurant" />
+      </xs:unique>
+   </xs:element>
 </xs:schema>
