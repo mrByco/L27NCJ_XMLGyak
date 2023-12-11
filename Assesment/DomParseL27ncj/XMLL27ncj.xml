@@ -1,151 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<L27NCJRestaurants xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                       xsi:noNamespaceSchemaLocation="XMLSchemaL27ncj.xsd">
-    <!-- OrderItem Instances -->
-    <OrderItem OrderItemID="1001" OrderID="50012" FoodID="2001">
-        <Quantity>2</Quantity>
-        <State>
-        	Elkészült
-        </State>
-    </OrderItem>
-    <OrderItem OrderItemID="1002" OrderID="5002" FoodID="2002">
-        <Quantity>1</Quantity>
-        <State>Folyamatban</State>
-    </OrderItem>
-    <OrderItem OrderItemID="1003" OrderID="5003" FoodID="2003">
-        <Quantity>3</Quantity>
-        <State>Kiszállítva</State>
-    </OrderItem>
-    <OrderItem OrderItemID="1004" OrderID="5004" FoodID="2004">
-        <Quantity>4</Quantity>
-        <State>Megrendelve</State>
-    </OrderItem>
-
-    <!-- Order Instances -->
-    <Order OrderID="5001" RestaurantID="3001">
-        <TotalPrice>7500.00</TotalPrice>
-        <TasteRating>4.5</TasteRating>
-        <ServiceRating>4.0</ServiceRating>
-        <PaymentDate>2023-04-12T18:30:00</PaymentDate>
-        <CompletionTime>2023-04-12T19:00:00</CompletionTime>
-        <StartTime>2023-04-12T17:45:00</StartTime>
-        <PaymentMethod>Készpénz</PaymentMethod>
-    </Order>
-    <Order OrderID="5002" RestaurantID="3002">
-        <TotalPrice>3200.00</TotalPrice>
-        <StartTime>2023-04-13T12:00:00</StartTime>
-        <PaymentMethod>Kártya</PaymentMethod>
-    </Order>
-    <Order OrderID="5003" RestaurantID="3003">
-        <TotalPrice>4500.00</TotalPrice>
-        <StartTime>2023-04-14T20:15:00</StartTime>
-        <PaymentMethod>Online</PaymentMethod>
-    </Order>
-    <Order OrderID="5004" RestaurantID="3004">
-        <TotalPrice>9800.00</TotalPrice>
-        <StartTime>2023-04-15T13:30:00</StartTime>
-        <PaymentMethod>Utánvét</PaymentMethod>
-    </Order>
-
-    <!-- Restaurant Instances -->
-    <Restaurant RestaurantID="3001">
-        <Address>
-            <Street>Kossuth Lajos utca</Street>
-            <City>Budapest</City>
-            <Door>2</Door>
-            
-        </Address>
-        <Name>Étterem A</Name>
-    </Restaurant>
-    <Restaurant RestaurantID="3002">
-        <Address>
-            <Street>Széchenyi tér</Street>
-            <City>Debrecen</City>
-            <Door>8</Door>
-        </Address>
-        <Name>Étterem B</Name>
-    </Restaurant>
-    <Restaurant RestaurantID="3003">
-        <Address>
-            <Street>Attila út</Street>
-            <City>Szeged</City>
-            <Door>32</Door>
-        </Address>
-        <Name>Étterem C</Name>
-    </Restaurant>
-    <Restaurant OrderItemID="3004" RestaurantID="3004">
-        <Address>
-            <Street>Vasvári Pál utca</Street>
-            <City>Pécs</City>
-            <Door>3</Door>
-        </Address>
-        <Name>Étterem D</Name>
-    </Restaurant>
-
-    <!-- Food Instances -->
-    <Food FoodID="2001">
-        <FoodID>2001</FoodID>
-        <Name>Hortobágyi palacsinta</Name>
-        <Price>1200.00</Price>
-        <Description>Tradicionalis magyar etel.</Description>
-    </Food>
-    <Food FoodID="2002">
-        <FoodID>2002</FoodID>
-        <Name>Gulyásleves</Name>
-        <Price>1500.00</Price>
-        <Description>Hagyományos magyar leves marhahúsból.</Description>
-    </Food>
-    <Food FoodID="2003">
-        <FoodID>2003</FoodID>
-        <Name>Pörkölt</Name>
-        <Price>1800.00</Price>
-        <Description>Magyar pörkölt sertéshúsból, paprikával és hagymával.</Description>
-    </Food>
-    <Food FoodID="2004">
-        <FoodID>2004</FoodID>
-        <Name>Somlói galuska</Name>
-        <Price>900.00</Price>
-        <Description>Édes magyar desszert.</Description>
-    </Food>
-
-    <!-- StockItem Instances -->
-    <StockItem StockItemID="6001" RestaurantID="5001">
-        <LastChecked>2023-04-11T10:00:00</LastChecked>
-        <Quantity>50</Quantity>
-    </StockItem>
-    <StockItem StockItemID="6002" RestaurantID="5002">
-        <LastChecked>2023-04-12T15:30:00</LastChecked>
-        <Quantity>30</Quantity>
-    </StockItem>
-    <StockItem StockItemID="6003" RestaurantID="5001">
-        <LastChecked>2023-04-13T09:20:00</LastChecked>
-        <Quantity>20</Quantity>
-    </StockItem>
-    <StockItem StockItemID="6004" RestaurantID="5003">
-        <LastChecked>2023-04-14T11:45:00</LastChecked>
-        <Quantity>40</Quantity>
-    </StockItem>
-
-    <!-- Employee Instances -->
-    <Owner OwnerID="7001" RestaurantID="5001">
-        <Name>Nagy István</Name>
-        <NetWorth>5000</NetWorth>
-        <CapabilityName>Vendéglátó ipari diploma</CapabilityName>
-    </Owner>
-    <Owner OwnerID="7002" RestaurantID="5002">
-        <Name>Kovács Éva</Name>
-        <NetWorth>8000</NetWorth>
-    	<CapabilityName>Befektető</CapabilityName>
-    </Owner>
-    <Owner OwnerID="7003" RestaurantID="5003">
-        <Name>Szabó Gábor</Name>
-        <NetWorth>20000</NetWorth>
-    	<CapabilityName>Tőzsde</CapabilityName>
-    	<CapabilityName>Kereskedelem</CapabilityName>
-    </Owner>
-    <Owner OwnerID="7004" RestaurantID="5004">
-        <Name>Tóth Anna</Name>
-        <NetWorth>3000</NetWorth>
-    	<CapabilityName>Szakács</CapabilityName>
-    </Owner>
+<L27NCJRestaurants xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XMLSchemaL27ncj.xsd">
+   <!-- OrderItem Instances -->
+   <OrderItem OrderItemID="1001" OrderID="50012" FoodID="2001">
+      <Quantity>2</Quantity>
+      <State>Elkészült</State>
+   </OrderItem>
+   <OrderItem OrderItemID="1002" OrderID="5002" FoodID="2002">
+      <Quantity>1</Quantity>
+      <State>Folyamatban</State>
+   </OrderItem>
+   <OrderItem OrderItemID="1003" OrderID="5003" FoodID="2003">
+      <Quantity>3</Quantity>
+      <State>Kiszállítva</State>
+   </OrderItem>
+   <OrderItem OrderItemID="1004" OrderID="5004" FoodID="2004">
+      <Quantity>4</Quantity>
+      <State>Megrendelve</State>
+   </OrderItem>
+   <!-- Order Instances -->
+   <Order OrderID="5001" RestaurantID="3001">
+      <TotalPrice>7500.00</TotalPrice>
+      <TasteRating>4.5</TasteRating>
+      <ServiceRating>4.0</ServiceRating>
+      <PaymentDate>2023-04-12T18:30:00</PaymentDate>
+      <CompletionTime>2023-04-12T19:00:00</CompletionTime>
+      <StartTime>2023-04-12T17:45:00</StartTime>
+      <PaymentMethod>Készpénz</PaymentMethod>
+   </Order>
+   <Order OrderID="5002" RestaurantID="3002">
+      <TotalPrice>3200.00</TotalPrice>
+      <StartTime>2023-04-13T12:00:00</StartTime>
+      <PaymentMethod>Kártya</PaymentMethod>
+   </Order>
+   <Order OrderID="5003" RestaurantID="3003">
+      <TotalPrice>4500.00</TotalPrice>
+      <StartTime>2023-04-14T20:15:00</StartTime>
+      <PaymentMethod>Online</PaymentMethod>
+   </Order>
+   <Order OrderID="5004" RestaurantID="3004">
+      <TotalPrice>9800.00</TotalPrice>
+      <StartTime>2023-04-15T13:30:00</StartTime>
+      <PaymentMethod>Utánvét</PaymentMethod>
+   </Order>
+   <!-- Restaurant Instances -->
+   <Restaurant RestaurantID="3001">
+      <Address>
+         <Street>Kossuth Lajos utca</Street>
+         <City>Budapest</City>
+         <Door>2</Door>
+      </Address>
+      <Name>Étterem A</Name>
+   </Restaurant>
+   <Restaurant RestaurantID="3002">
+      <Address>
+         <Street>Széchenyi tér</Street>
+         <City>Debrecen</City>
+         <Door>8</Door>
+      </Address>
+      <Name>Étterem B</Name>
+   </Restaurant>
+   <Restaurant RestaurantID="3003">
+      <Address>
+         <Street>Attila út</Street>
+         <City>Szeged</City>
+         <Door>32</Door>
+      </Address>
+      <Name>Étterem C</Name>
+   </Restaurant>
+   <Restaurant OrderItemID="3004" RestaurantID="3004">
+      <Address>
+         <Street>Vasvári Pál utca</Street>
+         <City>Pécs</City>
+         <Door>3</Door>
+      </Address>
+      <Name>Étterem D</Name>
+   </Restaurant>
+   <!-- Food Instances -->
+   <Food FoodID="2001">
+      <FoodID>2001</FoodID>
+      <Name>Hortobágyi palacsinta</Name>
+      <Price>1200.00</Price>
+      <Description>Tradicionalis magyar etel.</Description>
+   </Food>
+   <Food FoodID="2002">
+      <FoodID>2002</FoodID>
+      <Name>Gulyásleves</Name>
+      <Price>1500.00</Price>
+      <Description>Hagyományos magyar leves marhahúsból.</Description>
+   </Food>
+   <Food FoodID="2003">
+      <FoodID>2003</FoodID>
+      <Name>Pörkölt</Name>
+      <Price>1800.00</Price>
+      <Description>Magyar pörkölt sertéshúsból, paprikával és hagymával.</Description>
+   </Food>
+   <Food FoodID="2004">
+      <FoodID>2004</FoodID>
+      <Name>Somlói galuska</Name>
+      <Price>900.00</Price>
+      <Description>Édes magyar desszert.</Description>
+   </Food>
+   <!-- StockItem Instances -->
+   <StockItem StockItemID="6001" RestaurantID="5001">
+      <LastChecked>2023-04-11T10:00:00</LastChecked>
+      <Quantity>50</Quantity>
+   </StockItem>
+   <StockItem StockItemID="6002" RestaurantID="5002">
+      <LastChecked>2023-04-12T15:30:00</LastChecked>
+      <Quantity>30</Quantity>
+   </StockItem>
+   <StockItem StockItemID="6003" RestaurantID="5001">
+      <LastChecked>2023-04-13T09:20:00</LastChecked>
+      <Quantity>20</Quantity>
+   </StockItem>
+   <StockItem StockItemID="6004" RestaurantID="5003">
+      <LastChecked>2023-04-14T11:45:00</LastChecked>
+      <Quantity>40</Quantity>
+   </StockItem>
+   <!-- Employee Instances -->
+   <Owner OwnerID="7001" RestaurantID="5001">
+      <Name>Nagy István</Name>
+      <NetWorth>5000</NetWorth>
+      <CapabilityName>Vendéglátó ipari diploma</CapabilityName>
+   </Owner>
+   <Owner OwnerID="7002" RestaurantID="5002">
+      <Name>Kovács Éva</Name>
+      <NetWorth>8000</NetWorth>
+      <CapabilityName>Befektető</CapabilityName>
+   </Owner>
+   <Owner OwnerID="7003" RestaurantID="5003">
+      <Name>Szabó Gábor</Name>
+      <NetWorth>20000</NetWorth>
+      <CapabilityName>Tőzsde</CapabilityName>
+      <CapabilityName>Kereskedelem</CapabilityName>
+   </Owner>
+   <Owner OwnerID="7004" RestaurantID="5004">
+      <Name>Tóth Anna</Name>
+      <NetWorth>3000</NetWorth>
+      <CapabilityName>Szakács</CapabilityName>
+   </Owner>
 </L27NCJRestaurants>
