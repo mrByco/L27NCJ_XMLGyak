@@ -1,0 +1,8 @@
+hallgato: 
+        Holczer Vanda
+        2003
+        Programtervező informatika
+    
+  hnev: Holczer Vanda
+  szulev: 2003
+  szak: Programtervező informatika
