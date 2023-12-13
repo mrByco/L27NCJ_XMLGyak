@@ -14,7 +14,7 @@ public class JSONRead {
     public static void main(String[] args) {
         JSONParser parser = new JSONParser();
 
-        try (FileReader reader = new FileReader("L27NCJ_1206\\kurzusfelvetelL27NCJ.json")) {
+        try (FileReader reader = new FileReader("kurzusfelvetelL27NCJ.json")) {
             Object obj = parser.parse(reader);
             JSONObject jsonObject = (JSONObject) obj;
             OutputStreamWriter wr = new OutputStreamWriter(System.out, StandardCharsets.UTF_8);
